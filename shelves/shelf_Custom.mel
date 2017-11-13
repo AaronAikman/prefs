@@ -1,0 +1,916 @@
+global proc shelf_Custom () {
+    global string $gBuffStr;
+    global string $gBuffStr0;
+    global string $gBuffStr1;
+
+
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Bake existing animation into keys" 
+        -enableBackground 0
+        -align "center" 
+        -label "Bake Simulation" 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -font "plainLabelFont" 
+        -imageOverlayLabel "BS" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.5 
+        -image "menuIconEdit.png" 
+        -image1 "menuIconEdit.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "doBakeSimulationArgList 7 { \"1\",\"0\",\"10\",\"1\",\"0\",\"0\",\"1\",\"1\",\"0\",\"1\",\"animationList\",\"0\",\"0\",\"0\",\"0\",\"0\",\"1\",\"0\" };" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "import AlmondComponentAnimationExport as acae\nreload(acae)\n" 
+        -enableBackground 0
+        -align "center" 
+        -label "import AlmondComponentAnimationExport as acae\nreload(acae)\n" 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -font "plainLabelFont" 
+        -imageOverlayLabel "anm" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.5 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import AlmondComponentAnimationExport as acae\nreload(acae)\n" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "// Copyright 2000-2001 Michael Bazhutkin - studio Klassika\n//\n//  Rivet (button) 1.0\n//  Script File\n//\n//  Creation Date:  April 13, 2001\n//\n//\n//  Description:\n//        \tUse \"Rivet\" to constrain locator to polygon or NURBS surfaces\n//        \tSelect two edges on polygon object\n//        \tor select one point on NURBS surface and call rivet\n//        \tParent your rivets and buttons to this locator\n \nglobal proc string rivet ( )\n{\n \nstring $nameObject;\nstring $namePOSI;\n \nstring $parts[];\nstring $list[] = `filterExpand -sm 32`;\nint $size = size($list);\nif ($size > 0)\n{\n            \tif ($size != 2)\n            \t{          \terror(\"No two edges selected\");\n                            \treturn \"\";\n            \t}\n \n            \ttokenize($list[0],\".\",$parts);\n            \t$nameObject = $parts[0];\n            \ttokenize($list[0],\"[]\",$parts);\n            \tfloat $e1 = $parts[1];\n            \ttokenize($list[1],\"[]\",$parts);\n            \tfloat $e2 = $parts[1];\n \n            \tstring $nameCFME1 = `createNode curveFromMeshEdge -n \"rivetCurveFromMeshEdge1\"`;\n                            \tsetAttr \".ihi\" 1;\n                            \tsetAttr \".ei[0]\"  $e1;\n            \tstring $nameCFME2 = `createNode curveFromMeshEdge -n \"rivetCurveFromMeshEdge2\"`;\n                            \tsetAttr \".ihi\" 1;\n                            \tsetAttr \".ei[0]\"  $e2;\n            \tstring $nameLoft = `createNode loft -n \"rivetLoft1\"`;\n                            \tsetAttr -s 2 \".ic\";\n                            \tsetAttr \".u\" yes;\n                            \tsetAttr \".rsn\" yes;\n \n            \t$namePOSI = `createNode pointOnSurfaceInfo -n \"rivetPointOnSurfaceInfo1\"`;\n                            \tsetAttr \".turnOnPercentage\" 1;\n                            \tsetAttr \".parameterU\" 0.5;\n                            \tsetAttr \".parameterV\" 0.5;\n \n            \tconnectAttr -f ($nameLoft + \".os\") ($namePOSI + \".is\");\n            \tconnectAttr ($nameCFME1 + \".oc\") ($nameLoft + \".ic[0]\");\n            \tconnectAttr ($nameCFME2 + \".oc\") ($nameLoft + \".ic[1]\");\n            \tconnectAttr ($nameObject + \".w\") ($nameCFME1 + \".im\");\n            \tconnectAttr ($nameObject + \".w\") ($nameCFME2 + \".im\");\n}\nelse\n{          \t$list = `filterExpand -sm 41`;\n            \t$size = size($list);\n \n            \tif ($size > 0)\n            \t{\n                            \tif ($size != 1)\n                            \t{          \terror(\"No one point selected\");\n                                            \treturn \"\";\n                            \t}\n                            \ttokenize($list[0],\".\",$parts);\n                            \t$nameObject = $parts[0];\n                            \ttokenize($list[0],\"[]\",$parts);\n                            \tfloat $u = $parts[1];\n                            \tfloat $v = $parts[2];\n                            \t$namePOSI = `createNode pointOnSurfaceInfo -n \"rivetPointOnSurfaceInfo1\"`;\n                                                            \tsetAttr \".turnOnPercentage\" 0;\n                                                            \tsetAttr \".parameterU\" $u;\n                                                            \tsetAttr \".parameterV\" $v;\n                            \tconnectAttr -f ($nameObject + \".ws\") ($namePOSI + \".is\");\n            \t}\n            \telse\n            \t{          \terror(\"No edges or point selected\");\n                            \treturn \"\";\n            \t}\n}\n \nstring $nameLocator = `createNode transform -n \"rivet1\"`;\ncreateNode locator -n ($nameLocator + \"Shape\") -p $nameLocator;\n \nstring $nameAC = `createNode aimConstraint -p $nameLocator -n ($nameLocator + \"_rivetAimConstraint1\")`;\n            \tsetAttr \".tg[0].tw\" 1;\n            \tsetAttr \".a\" -type \"double3\" 0 1 0;\n            \tsetAttr \".u\" -type \"double3\" 0 0 1;\n            \tsetAttr -k off \".v\";\n            \tsetAttr -k off \".tx\";\n            \tsetAttr -k off \".ty\";\n            \tsetAttr -k off \".tz\";\n            \tsetAttr -k off \".rx\";\n            \tsetAttr -k off \".ry\";\n            \tsetAttr -k off \".rz\";\n            \tsetAttr -k off \".sx\";\n            \tsetAttr -k off \".sy\";\n            \tsetAttr -k off \".sz\";\n \nconnectAttr ($namePOSI + \".position\") ($nameLocator + \".translate\");\nconnectAttr ($namePOSI + \".n\") ($nameAC + \".tg[0].tt\");\nconnectAttr ($namePOSI + \".tv\") ($nameAC + \".wu\");\nconnectAttr ($nameAC + \".crx\") ($nameLocator + \".rx\");\nconnectAttr ($nameAC + \".cry\") ($nameLocator + \".ry\");\nconnectAttr ($nameAC + \".crz\") ($nameLocator + \".rz\");\n \nselect -r $nameLocator;\nreturn ($nameLocator);\n \n}\n \nrivet;" 
+        -enableBackground 0
+        -align "center" 
+        -label "// Copyright 2000-2001 Michael Bazhutkin - studio Klassika\n//\n//..." 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -font "plainLabelFont" 
+        -imageOverlayLabel "riv" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.5 
+        -image "commandButton.png" 
+        -image1 "commandButton.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "// Copyright 2000-2001 Michael Bazhutkin - studio Klassika\n//\n//  Rivet (button) 1.0\n//  Script File\n//\n//  Creation Date:  April 13, 2001\n//\n//\n//  Description:\n//        \tUse \"Rivet\" to constrain locator to polygon or NURBS surfaces\n//        \tSelect two edges on polygon object\n//        \tor select one point on NURBS surface and call rivet\n//        \tParent your rivets and buttons to this locator\n \nglobal proc string rivet ( )\n{\n \nstring $nameObject;\nstring $namePOSI;\n \nstring $parts[];\nstring $list[] = `filterExpand -sm 32`;\nint $size = size($list);\nif ($size > 0)\n{\n            \tif ($size != 2)\n            \t{          \terror(\"No two edges selected\");\n                            \treturn \"\";\n            \t}\n \n            \ttokenize($list[0],\".\",$parts);\n            \t$nameObject = $parts[0];\n            \ttokenize($list[0],\"[]\",$parts);\n            \tfloat $e1 = $parts[1];\n            \ttokenize($list[1],\"[]\",$parts);\n            \tfloat $e2 = $parts[1];\n \n            \tstring $nameCFME1 = `createNode curveFromMeshEdge -n \"rivetCurveFromMeshEdge1\"`;\n                            \tsetAttr \".ihi\" 1;\n                            \tsetAttr \".ei[0]\"  $e1;\n            \tstring $nameCFME2 = `createNode curveFromMeshEdge -n \"rivetCurveFromMeshEdge2\"`;\n                            \tsetAttr \".ihi\" 1;\n                            \tsetAttr \".ei[0]\"  $e2;\n            \tstring $nameLoft = `createNode loft -n \"rivetLoft1\"`;\n                            \tsetAttr -s 2 \".ic\";\n                            \tsetAttr \".u\" yes;\n                            \tsetAttr \".rsn\" yes;\n \n            \t$namePOSI = `createNode pointOnSurfaceInfo -n \"rivetPointOnSurfaceInfo1\"`;\n                            \tsetAttr \".turnOnPercentage\" 1;\n                            \tsetAttr \".parameterU\" 0.5;\n                            \tsetAttr \".parameterV\" 0.5;\n \n            \tconnectAttr -f ($nameLoft + \".os\") ($namePOSI + \".is\");\n            \tconnectAttr ($nameCFME1 + \".oc\") ($nameLoft + \".ic[0]\");\n            \tconnectAttr ($nameCFME2 + \".oc\") ($nameLoft + \".ic[1]\");\n            \tconnectAttr ($nameObject + \".w\") ($nameCFME1 + \".im\");\n            \tconnectAttr ($nameObject + \".w\") ($nameCFME2 + \".im\");\n}\nelse\n{          \t$list = `filterExpand -sm 41`;\n            \t$size = size($list);\n \n            \tif ($size > 0)\n            \t{\n                            \tif ($size != 1)\n                            \t{          \terror(\"No one point selected\");\n                                            \treturn \"\";\n                            \t}\n                            \ttokenize($list[0],\".\",$parts);\n                            \t$nameObject = $parts[0];\n                            \ttokenize($list[0],\"[]\",$parts);\n                            \tfloat $u = $parts[1];\n                            \tfloat $v = $parts[2];\n                            \t$namePOSI = `createNode pointOnSurfaceInfo -n \"rivetPointOnSurfaceInfo1\"`;\n                                                            \tsetAttr \".turnOnPercentage\" 0;\n                                                            \tsetAttr \".parameterU\" $u;\n                                                            \tsetAttr \".parameterV\" $v;\n                            \tconnectAttr -f ($nameObject + \".ws\") ($namePOSI + \".is\");\n            \t}\n            \telse\n            \t{          \terror(\"No edges or point selected\");\n                            \treturn \"\";\n            \t}\n}\n \nstring $nameLocator = `createNode transform -n \"rivet1\"`;\ncreateNode locator -n ($nameLocator + \"Shape\") -p $nameLocator;\n \nstring $nameAC = `createNode aimConstraint -p $nameLocator -n ($nameLocator + \"_rivetAimConstraint1\")`;\n            \tsetAttr \".tg[0].tw\" 1;\n            \tsetAttr \".a\" -type \"double3\" 0 1 0;\n            \tsetAttr \".u\" -type \"double3\" 0 0 1;\n            \tsetAttr -k off \".v\";\n            \tsetAttr -k off \".tx\";\n            \tsetAttr -k off \".ty\";\n            \tsetAttr -k off \".tz\";\n            \tsetAttr -k off \".rx\";\n            \tsetAttr -k off \".ry\";\n            \tsetAttr -k off \".rz\";\n            \tsetAttr -k off \".sx\";\n            \tsetAttr -k off \".sy\";\n            \tsetAttr -k off \".sz\";\n \nconnectAttr ($namePOSI + \".position\") ($nameLocator + \".translate\");\nconnectAttr ($namePOSI + \".n\") ($nameAC + \".tg[0].tt\");\nconnectAttr ($namePOSI + \".tv\") ($nameAC + \".wu\");\nconnectAttr ($nameAC + \".crx\") ($nameLocator + \".rx\");\nconnectAttr ($nameAC + \".cry\") ($nameLocator + \".ry\");\nconnectAttr ($nameAC + \".crz\") ($nameLocator + \".rz\");\n \nselect -r $nameLocator;\nreturn ($nameLocator);\n \n}\n \nrivet;" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "import maya.cmds as cmds\n\nsnapType = 2\n\ndef snapTo(par, chi, constrType=3):\n\tcmds.select(par, r=True)\n\tcmds.select(chi, add=True)\n\tconstrName = '{}_tempConstraint'.format(chi)\n\tif constrType == 1:\n\t\t# Translation\n\t\tcmds.pointConstraint(mo=False, n=constrName)\n\telif constrType == 2:\n\t\t# Rotation\n\t\tcmds.orientConstraint(mo=False, n=constrName)\n\telif constrType == 3:\n\t\t# Translation and Rotation\n\t\tcmds.parentConstraint(mo=False, n=constrName)\n\telif constrType == 4:\n\t\t# All\n\t\tcmds.parentConstraint(mo=False, n=constrName)\n\t\tcmds.delete(constrName)\n\t\tcmds.scaleConstraint(mo=False, n=constrName)\n\telse:\n\t\t# Scale\n\t\tcmds.scaleConstraint(mo=False, n=constrName)\n\n\tcmds.delete(constrName)\n\tcmds.select(cl=True)\n\n\nsel = cmds.ls(sl=True)\ntoSnapTo = sel[0]\nsel.pop(0)\n\nfor i in sel:\n\tsnapTo(toSnapTo, i, snapType)" 
+        -enableBackground 0
+        -align "center" 
+        -label "import maya.cmds as cmds\n\nsnapType = 2\n\ndef snapTo(par, chi, con..." 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.5 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "python \"import AAikman_Utils; reload(AAikman_Utils); AAikman_Utils.doSnap(1)\";\n\n\n" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Select surfaces and a target object" 
+        -enableBackground 0
+        -align "center" 
+        -label "ShrinkWrap" 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.5 
+        -image "shrinkwrap.png" 
+        -image1 "shrinkwrap.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "CreateShrinkWrap" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Select object(s), select curve(s)" 
+        -enableBackground 0
+        -align "center" 
+        -label "Wire" 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.5 
+        -image "wire.png" 
+        -image1 "wire.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "WireTool" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Select items to deform" 
+        -enableBackground 0
+        -align "center" 
+        -label "Bend" 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.5 
+        -image "bendNLD.png" 
+        -image1 "bendNLD.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "Bend" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Select items to deform" 
+        -enableBackground 0
+        -align "center" 
+        -label "Sine" 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.5 
+        -image "sineNLD.png" 
+        -image1 "sineNLD.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "Sine" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Select items to deform" 
+        -enableBackground 0
+        -align "center" 
+        -label "Twist" 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.5 
+        -image "twistNLD.png" 
+        -image1 "twistNLD.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "Twist" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Select items to deform" 
+        -enableBackground 0
+        -align "center" 
+        -label "Squash" 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.5 
+        -image "squashNLD.png" 
+        -image1 "squashNLD.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "Squash" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Measure distance between two points" 
+        -enableBackground 0
+        -align "center" 
+        -label "Distance Tool" 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.5 
+        -image "distanceDim.png" 
+        -image1 "distanceDim.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "DistanceTool" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Select object(s)" 
+        -enableBackground 0
+        -align "center" 
+        -label "Cluster" 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.5 
+        -image "cluster.png" 
+        -image1 "cluster.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "CreateCluster" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Select set or deformer" 
+        -enableBackground 0
+        -align "center" 
+        -label "Edit Membership Tool" 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.5 
+        -image "setEdit.png" 
+        -image1 "setEdit.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "EditMembershipTool" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Select two curves" 
+        -enableBackground 0
+        -align "center" 
+        -label "Attach" 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.5 
+        -image "attachCurves.png" 
+        -image1 "attachCurves.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "doAttachCurveArgList 2 { \"1\", \"0\", \"1\", \"1\", \"0.5\", \"0\", \"0.1\" }" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Select curve parameter point(s)" 
+        -enableBackground 0
+        -align "center" 
+        -label "Detach" 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.5 
+        -image "detachCurve.png" 
+        -image1 "detachCurve.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "performDetachPreset 1 1" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Select curve(s) or curve on surface(s)" 
+        -enableBackground 0
+        -align "center" 
+        -label "Rebuild" 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.5 
+        -image "rebuildCurve.png" 
+        -image1 "rebuildCurve.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "performRebuildCurveSet 1 1 0 0.01 12 3 1 0 0 1 0 1 0.05" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Text options" 
+        -enableBackground 0
+        -align "center" 
+        -label "menuItem7180" 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.5 
+        -image "text.png" 
+        -image1 "text.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "CreateTextOptions" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Rebuild curve options" 
+        -enableBackground 0
+        -align "center" 
+        -label "Rebuild Curve Option Box" 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.5 
+        -image "rebuildCurve.png" 
+        -image1 "rebuildCurve.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "RebuildCurveOptions" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Create set and add it to the Quick Select Set menu" 
+        -enableBackground 0
+        -align "center" 
+        -label "Quick Select Set..." 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -font "plainLabelFont" 
+        -imageOverlayLabel "QSS" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.5 
+        -image "menuIconEdit.png" 
+        -image1 "menuIconEdit.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "CreateQuickSelectSet" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Open a scene" 
+        -enableBackground 0
+        -align "center" 
+        -label "Open Scene..." 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -font "plainLabelFont" 
+        -imageOverlayLabel "OS" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.5 
+        -image "menuIconFile.png" 
+        -image1 "menuIconFile.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "OpenScene" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Bake simulation options" 
+        -enableBackground 0
+        -align "center" 
+        -label "bakeSimulationDialogItem" 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Bso" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.5 
+        -image "menuIconEdit.png" 
+        -image1 "menuIconEdit.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "BakeSimulationOptions" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Blend shape add options" 
+        -enableBackground 0
+        -align "center" 
+        -label "menuItem878" 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.5 
+        -image "blendShapePlus.png" 
+        -image1 "blendShapePlus.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "AddBlendShapeOptions" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Rename objects in scene" 
+        -enableBackground 0
+        -align "center" 
+        -label "Search and Replace Names..." 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -font "plainLabelFont" 
+        -imageOverlayLabel "SaRN" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.5 
+        -image "menuIconModify.png" 
+        -image1 "menuIconModify.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "performSearchReplaceNames 1" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Blend shape options" 
+        -enableBackground 0
+        -align "center" 
+        -label "blendShapeDialogItem" 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.5 
+        -image "blendShape.png" 
+        -image1 "blendShape.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "CreateBlendShapeOptions" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Blend shape remove options" 
+        -enableBackground 0
+        -align "center" 
+        -label "menuItem880" 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.5 
+        -image "removeBlendShape.png" 
+        -image1 "removeBlendShape.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "RemoveBlendShapeOptions" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Convert polygon edges to nurbs curves." 
+        -enableBackground 0
+        -align "center" 
+        -label "Polygon Edges to Curve" 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.5 
+        -image "polyEdgeToCurves.png" 
+        -image1 "polyEdgeToCurves.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "CreateCurveFromPoly" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Select NURBS surface(s)" 
+        -enableBackground 0
+        -align "center" 
+        -label "NURBS to Polygons" 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.5 
+        -image "nurbsToPolygons.png" 
+        -image1 "nurbsToPolygons.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "nurbsToPolyPreset 1 1 0 0 0 200 0.9 0.01 0.001 0.1 1 3 1 3 0 0 1 0 " 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Select object(s) to animate along a motion path, followed by the motion path curve" 
+        -enableBackground 0
+        -align "center" 
+        -label "Attach to Motion Path" 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.5 
+        -image "motionPath.png" 
+        -image1 "motionPath.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "pathAnimation -fractionMode true -follow true -followAxis z -upAxis y -worldUpType \"vector\" -worldUpVector 0 1 0 -inverseUp false -inverseFront false -bank false -startTimeU `playbackOptions -query -minTime` -endTimeU  `playbackOptions -query -maxTime`" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Select path animated object(s) to flow along a motion path" 
+        -enableBackground 0
+        -align "center" 
+        -label "Flow Path Object" 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.5 
+        -image "flowPathObj.png" 
+        -image1 "flowPathObj.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "flowObjects 100 2 2 0 1 100 2 2" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Select the deformed object(s) to delete all the history except deformers" 
+        -enableBackground 0
+        -align "center" 
+        -label "Non-Deformer History" 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -font "plainLabelFont" 
+        -imageOverlayLabel "NH" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.5 
+        -image "menuIconEdit.png" 
+        -image1 "menuIconEdit.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "BakeNonDefHistory" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+
+} 
