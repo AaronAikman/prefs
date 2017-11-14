@@ -425,7 +425,7 @@
                 -divider 0
                 -subMenu 0
                 -tearOff 0
-                -command "source \"C:/Users/aaikman/Documents/maya/2016/prefs/scripts/AA/AAMovePivotToBase.mel\";\n" 
+                -command "AAikman_MovePivotToBase\n" 
                 -altModifier 0
                 -optionModifier 0
                 -commandModifier 0
@@ -462,6 +462,7 @@
                 -allowOptionBoxes 1
                 -postMenuCommandOnce 0
                 -enableCommandRepeat 0
+                -echoCommand 0
                 -italicized 0
                 -boldFont 1
                 -sourceType "mel" 
@@ -943,7 +944,7 @@
             -image "menuIconEdit.png" 
             -echoCommand 0
             -italicized 0
-            -boldFont 0
+            -boldFont 1
             -sourceType "mel" 
             -longDivider 1
             menuEditorMenuItem2;
@@ -2202,7 +2203,7 @@
                 -image "menuIconModify.png" 
                 -echoCommand 0
                 -italicized 0
-                -boldFont 0
+                -boldFont 1
                 -sourceType "mel" 
                 -longDivider 1
                 menuEditorMenuItem7;
@@ -3879,12 +3880,13 @@
                 -image "curveEP.png" 
                 -echoCommand 0
                 -italicized 0
-                -boldFont 0
+                -boldFont 1
                 -sourceType "mel" 
                 -longDivider 1
                 menuEditorMenuItem1;
 
             menuItem
+                -label "menuEditorMenuItem2" 
                 -divider 0
                 -subMenu 0
                 -tearOff 0
@@ -3902,7 +3904,7 @@
                 -enableCommandRepeat 0
                 -echoCommand 0
                 -italicized 0
-                -boldFont 0
+                -boldFont 1
                 -sourceType "mel" 
                 -longDivider 1
                 menuEditorMenuItem2;
@@ -3928,7 +3930,7 @@
                 -image "polyEdgeToCurves.png" 
                 -echoCommand 0
                 -italicized 0
-                -boldFont 0
+                -boldFont 1
                 -sourceType "mel" 
                 -longDivider 1
                 menuEditorMenuItem3;
@@ -3954,7 +3956,7 @@
                 -image "nurbsToPolygons.png" 
                 -echoCommand 0
                 -italicized 0
-                -boldFont 0
+                -boldFont 1
                 -sourceType "mel" 
                 -longDivider 1
                 menuEditorMenuItem11;
@@ -4709,7 +4711,7 @@
                 -enableCommandRepeat 1
                 -echoCommand 0
                 -italicized 0
-                -boldFont 0
+                -boldFont 1
                 -sourceType "mel" 
                 -longDivider 1
                 menuEditorMenuItem2;
@@ -4734,7 +4736,7 @@
                 -enableCommandRepeat 1
                 -echoCommand 0
                 -italicized 0
-                -boldFont 0
+                -boldFont 1
                 -sourceType "mel" 
                 -longDivider 1
                 menuEditorMenuItem1;
@@ -5211,7 +5213,7 @@
                 -image "blendShapePlus.png" 
                 -echoCommand 0
                 -italicized 0
-                -boldFont 0
+                -boldFont 1
                 -sourceType "mel" 
                 -longDivider 1
                 menuEditorMenuItem1;
@@ -5236,7 +5238,7 @@
                 -enableCommandRepeat 1
                 -echoCommand 0
                 -italicized 0
-                -boldFont 0
+                -boldFont 1
                 -sourceType "mel" 
                 -longDivider 1
                 menuEditorMenuItem2;
@@ -5262,7 +5264,7 @@
                 -image "blendShape.png" 
                 -echoCommand 0
                 -italicized 0
-                -boldFont 0
+                -boldFont 1
                 -sourceType "mel" 
                 -longDivider 1
                 menuEditorMenuItem3;
@@ -5288,7 +5290,7 @@
                 -image "removeBlendShape.png" 
                 -echoCommand 0
                 -italicized 0
-                -boldFont 0
+                -boldFont 1
                 -sourceType "mel" 
                 -longDivider 1
                 menuEditorMenuItem6;
@@ -5314,7 +5316,7 @@
                 -image "motionPath.png" 
                 -echoCommand 0
                 -italicized 0
-                -boldFont 0
+                -boldFont 1
                 -sourceType "mel" 
                 -longDivider 1
                 menuEditorMenuItem7;
@@ -5339,7 +5341,7 @@
                 -image "flowPathObj.png" 
                 -echoCommand 0
                 -italicized 0
-                -boldFont 0
+                -boldFont 1
                 -sourceType "mel" 
                 -longDivider 1
                 menuEditorMenuItem11;
@@ -5617,7 +5619,7 @@
                 -enableCommandRepeat 1
                 -echoCommand 0
                 -italicized 0
-                -boldFont 0
+                -boldFont 1
                 -sourceType "mel" 
                 -longDivider 1
                 menuEditorMenuItem1;
