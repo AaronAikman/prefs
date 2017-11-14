@@ -416,7 +416,7 @@
                 -enableCommandRepeat 1
                 -echoCommand 0
                 -italicized 0
-                -boldFont 0
+                -boldFont 1
                 -sourceType "mel" 
                 -longDivider 1
                 menuEditorMenuItem2;
@@ -3883,32 +3883,6 @@
                 menuEditorMenuItem4;
 
             menuItem
-                -label "Quick Select Set..." 
-                -divider 0
-                -subMenu 0
-                -tearOff 0
-                -command "CreateQuickSelectSet" 
-                -altModifier 0
-                -optionModifier 0
-                -commandModifier 0
-                -ctrlModifier 0
-                -shiftModifier 0
-                -optionBox 0
-                -enable 1
-                -data 0
-                -radialPosition "N" 
-                -allowOptionBoxes 1
-                -postMenuCommandOnce 0
-                -enableCommandRepeat 1
-                -image "menuIconEdit.png" 
-                -echoCommand 0
-                -italicized 0
-                -boldFont 1
-                -sourceType "mel" 
-                -longDivider 1
-                menuEditorMenuItem10;
-
-            menuItem
                 -label "EP Curve Tool" 
                 -divider 0
                 -subMenu 0
@@ -4009,6 +3983,32 @@
                 -sourceType "mel" 
                 -longDivider 1
                 menuEditorMenuItem11;
+
+            menuItem
+                -label "QuickSelectSet" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "CreateSetOptions" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "N" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "menuIconEdit.png" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 0
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem12;
 
         setParent -m ..;
 
