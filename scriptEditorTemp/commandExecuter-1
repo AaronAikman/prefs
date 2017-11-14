@@ -1,0 +1,29 @@
+import maya.cmds as cmds
+import maya.mel as mel
+
+startDir = "D:/Almond/Main/Art/Source/Animation"
+
+
+def main():
+    WinName = "componentExportWindow"
+
+    if (cmds.window(WinName, exists=True)):
+        cmds.deleteUI(WinName)
+    cmds.window( WinName, title='Component Animation Export')
+        
+    cmds.rowColumnLayout( numberOfColumns=3, columnAttach=(1, 'left', 0), columnWidth=[(1, 100), (2, 250)] )
+    cmds.text( label='Maya Scene' )
+    global front
+    front = cmds.textField(text=startDir)
+    cmds.iconTextButton( style='iconAndTextVertical',align='right',command='scnFileOpen()', image1='fileOpen.xpm', height=8 )
+    # cmds.showWindow( componentExportWindow )
+    cmds.showWindow()
+
+def scnFileOpen():
+    chosenFile = cmds.fileDialog2(dir = startDir, fm=3, ds=0, cap="Animation Destination")[0]
+    cmds.textField(front, edit=True, tx=chosenFile)
+    print chosenFile
+
+
+
+main()

@@ -40,12 +40,10 @@ windowPref -topLeftCorner 565 -1812 -widthHeight 1411 365 -maximized false -pare
 windowPref -topLeftCorner 706 1280 -widthHeight 321 598 -maximized false -parentMain true win_W_0;
 windowPref -topLeftCorner 706 1280 -widthHeight 321 598 -maximized false -parentMain true win_SW_0;
 windowPref -topLeftCorner 667 1007 -widthHeight 321 598 -maximized false -parentMain true win_S_0;
-windowPref -topLeftCorner 706 1280 -widthHeight 349 420 -maximized false -parentMain true window1;
 windowPref -topLeftCorner 230 275 -widthHeight 349 697 -maximized false -parentMain true MMEditorWnd_AikmanWork;
 windowPref -topLeftCorner 706 1280 -widthHeight 321 598 -maximized false -parentMain true win_SE_0;
 windowPref -topLeftCorner 880 882 -widthHeight 349 420 -maximized false -parentMain true window3;
 windowPref -topLeftCorner 706 1280 -widthHeight 530 300 -maximized false -parentMain true cmdShellWnd;
-windowPref -topLeftCorner 390 879 -widthHeight 349 420 -maximized false -parentMain true window2;
 windowPref -topLeftCorner 706 1280 -widthHeight 321 598 -maximized false -parentMain true win_NE_0;
 windowPref -topLeftCorner 705 1646 -widthHeight 349 420 -maximized false -parentMain true window4;
 windowPref -topLeftCorner 1410 499 -widthHeight 349 420 -maximized false -parentMain true window6;
@@ -59,3 +57,5 @@ windowPref -topLeftCorner 706 1280 -widthHeight 321 598 -maximized false -parent
 windowPref -topLeftCorner 100 430 -widthHeight 349 697 -maximized false -parentMain true MMEditorWnd_AikmanWorkF;
 windowPref -topLeftCorner 854 1304 -widthHeight 321 531 -maximized false -parentMain true win_E_0;
 windowPref -topLeftCorner 891 809 -widthHeight 349 420 -maximized false -parentMain true window10;
+windowPref -topLeftCorner 706 1280 -widthHeight 313 302 -maximized false -parentMain true Quick_rename_toolWindow;
+windowPref -topLeftCorner 911 1132 -widthHeight 1212 813 -maximized false -parentMain true ezMel2PyWin;
