@@ -1,0 +1,128 @@
+global proc shelf_Almond () {
+    global string $gBuffStr;
+    global string $gBuffStr0;
+    global string $gBuffStr1;
+
+
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "'''\nAuthor:\nAaron Aikman\n\nOwner:\nBlind Squirrel Entertainment\n\nDate of Creation:\n11/08/2017\n\nInstallation:\nPut in scripts folder\n\nShelf Button:\nimport sys\nsys.path.append('d:/Almond/Main/Pipeline/Tools/Maya/')\nimport Almond_AnimationExport as aae\nreload(aae)\n\nUsage:\nSelect the Root joints of components you want to export\nThese root joints should not have any parents\nDo not select anything but the root joints\nChoose destination and naming options\nClick the run button\nNote that this process will overwrite files\n\nProcess:\nThe script will bake the keys onto the joints and export them\nwith the correct settings to the correct location\n\n'''" 
+        -enableBackground 0
+        -align "center" 
+        -label "import sys\nsys.path.append('d:/Almond/Main/Pipeline/Tools/Maya..." 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.5 
+        -image "D:/Almond/Main/Pipeline/Tools/Maya/icons/AnimationExport.png" 
+        -image1 "D:/Almond/Main/Pipeline/Tools/Maya/icons/AnimationExport.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import sys\nsys.path.append('d:/Almond/Main/Pipeline/Tools/Maya/scripts/')\nimport Almond_AnimationExport as aae\nreload(aae)" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "'''\nAuthor:\nAaron Aikman\n\nOwner:\nBlind Squirrel Entertainment\n\nDate of Creation:\n11/17/2017\n\nDescription:\nSets settings for different projects\n\nInstallation:\nPut in scripts folder\n\nShelf Button:\nimport sys\nsys.path.append('d:/Almond/Main/Pipeline/Tools/Maya/')\nimport Almond_SetProjectSettings as sps\nreload(sps)\nsps.main(0)\n\n'''" 
+        -enableBackground 0
+        -align "center" 
+        -label "import sys\nsys.path.append('d:/Almond/Main/Pipeline/Tools/Maya..." 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.5 
+        -image "D:/Almond/Main/Pipeline/Tools/Maya/icons/DSTR.png" 
+        -image1 "D:/Almond/Main/Pipeline/Tools/Maya/icons/DSTR.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import sys\nsys.path.append('d:/Almond/Main/Pipeline/Tools/Maya/scripts/')\nimport Almond_SetProjectSettings as sps\nreload(sps)\nsps.main(0)\n# SWAR\n" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "'''\nAuthor:\nAaron Aikman\n\nOwner:\nBlind Squirrel Entertainment\n\nDate of Creation:\n11/17/2017\n\nDescription:\nSets settings for different projects\n\nInstallation:\nPut in scripts folder\n\nShelf Button:\nimport sys\nsys.path.append('d:/Almond/Main/Pipeline/Tools/Maya/')\nimport Almond_SetProjectSettings as sps\nreload(sps)\nsps.main(0)\n\n'''" 
+        -enableBackground 0
+        -align "center" 
+        -label "import sys\nsys.path.append('d:/Almond/Main/Pipeline/Tools/Maya..." 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.5 
+        -image "D:/Almond/Main/Pipeline/Tools/Maya/icons/Almond.png" 
+        -image1 "D:/Almond/Main/Pipeline/Tools/Maya/icons/Almond.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import sys\nsys.path.append('d:/Almond/Main/Pipeline/Tools/Maya/scripts/')\nimport Almond_SetProjectSettings as sps\nreload(sps)\nsps.main(1)\n# Almond" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "loadUnloadReference(1,1);" 
+        -enableBackground 0
+        -align "center" 
+        -label "loadUnloadReference(1,1);" 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.5 
+        -image "D:/Almond/Main/Pipeline/Tools/Maya/icons/ReloadRef.png" 
+        -image1 "D:/Almond/Main/Pipeline/Tools/Maya/icons/ReloadRef.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "loadUnloadReference(1,1);" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+
+} 

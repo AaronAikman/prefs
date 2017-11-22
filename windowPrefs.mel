@@ -22,7 +22,7 @@ windowPref -topLeftCorner 210 390 -widthHeight 653 450 -maximized false -parentM
 windowPref -topLeftCorner 706 1280 -widthHeight 302 102 -maximized false -parentMain true epicToolsInstall_UI;
 windowPref -topLeftCorner 529 1383 -widthHeight 590 700 -maximized false -parentMain true FBXIMPORTWINDOWUI;
 windowPref -topLeftCorner 706 1280 -widthHeight 590 700 -maximized false -parentMain true FBXEXPORTWINDOWUI;
-windowPref -topLeftCorner 186 2425 -widthHeight 546 350 -maximized false -parentMain true OptionBoxWindow;
+windowPref -topLeftCorner 198 2642 -widthHeight 546 350 -maximized false -parentMain true OptionBoxWindow;
 windowPref -topLeftCorner 623 1062 -widthHeight 310 330 -maximized false -parentMain true MirrorsEdge;
 windowPref -topLeftCorner 458 -1927 -widthHeight 1107 1128 -maximized false -parentMain true nodeEditorPanel1Window;
 windowPref -topLeftCorner 460 -807 -widthHeight 798 518 -maximized false -parentMain true componentEditorPanel1Window;
@@ -30,7 +30,7 @@ windowPref -topLeftCorner 706 1280 -widthHeight 500 500 -maximized false -parent
 windowPref -topLeftCorner 706 1280 -widthHeight 357 275 -maximized false -parentMain true namespaceEditor;
 windowPref -topLeftCorner 821 1592 -widthHeight 640 480 -maximized false -parentMain true modelPanel1Window;
 windowPref -topLeftCorner 458 4793 -widthHeight 958 1128 -maximized false -parentMain true scriptEditorPanel1Window;
-windowPref -topLeftCorner 1011 -820 -widthHeight 804 573 -maximized false -parentMain true expressionEditorWin;
+windowPref -topLeftCorner 1012 -815 -widthHeight 804 573 -maximized false -parentMain true expressionEditorWin;
 windowPref -topLeftCorner 706 1280 -widthHeight 828 344 -maximized false -parentMain true menuSearchWindow;
 windowPref -topLeftCorner 1539 710 -widthHeight 500 400 -maximized false -parentMain true LockingKeyable;
 windowPref -topLeftCorner 706 1280 -widthHeight 381 500 -maximized false -parentMain true RenameAttrWin;
@@ -59,3 +59,7 @@ windowPref -topLeftCorner 854 1304 -widthHeight 321 531 -maximized false -parent
 windowPref -topLeftCorner 891 809 -widthHeight 349 420 -maximized false -parentMain true window10;
 windowPref -topLeftCorner 706 1280 -widthHeight 313 302 -maximized false -parentMain true Quick_rename_toolWindow;
 windowPref -topLeftCorner 911 1132 -widthHeight 1212 813 -maximized false -parentMain true ezMel2PyWin;
+windowPref -topLeftCorner 706 1280 -widthHeight 397 438 -maximized false -parentMain true Viewport20OptionsWindow;
+windowPref -topLeftCorner 706 1280 -widthHeight 520 620 -maximized false -parentMain true connectWindowModal;
+windowPref -topLeftCorner 1025 239 -widthHeight 390 530 -maximized false -parentMain true setDrivenWnd;
+windowPref -topLeftCorner 706 1280 -widthHeight 500 525 -maximized false -parentMain true AddAttrWin;

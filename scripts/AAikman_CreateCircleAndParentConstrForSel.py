@@ -5,7 +5,7 @@ import maya.mel as mel
 ctrlName = 'Chain'
 ctrlSize = 30
 
-# Leave Alone
+# Don't modify
 ctrlStartIter = 1
 
 sel = cmds.ls(sl=True)

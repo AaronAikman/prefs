@@ -912,5 +912,314 @@ global proc shelf_Custom () {
         -commandRepeatable 1
         -flat 1
     ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "import AAikman_LockNode as aaln\nreload(aaln)\naaln.main(0)" 
+        -enableBackground 0
+        -align "center" 
+        -label "import AAikman_LockNode as aaln\nreload(aaln)\naaln.main(0)" 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -font "plainLabelFont" 
+        -imageOverlayLabel "LOCK" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.5 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import AAikman_LockNode as aaln\nreload(aaln)\naaln.main(1)" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "import AAikman_LockNode as aaln\nreload(aaln)\naaln.main(0)" 
+        -enableBackground 0
+        -align "center" 
+        -label "import AAikman_LockNode as aaln\nreload(aaln)\naaln.main(0)" 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -font "plainLabelFont" 
+        -imageOverlayLabel "ULCK" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.5 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import AAikman_LockNode as aaln\nreload(aaln)\naaln.main(0)" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "import AAikman_GroupUnder as aagu\nreload(aagu)\naagu.main()" 
+        -enableBackground 0
+        -align "center" 
+        -label "import AAikman_GroupUnder as aagu\nreload(aagu)\naagu.main()" 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -font "plainLabelFont" 
+        -imageOverlayLabel "GrpUn" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.5 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import AAikman_GroupUnder as aagu\nreload(aagu)\naagu.main()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "import AAikman_UnlockVis as aauv\nreload(aauv)\naauv.main()" 
+        -enableBackground 0
+        -align "center" 
+        -label "import AAikman_UnlockVis as aauv\nreload(aauv)\naauv.main()" 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -font "plainLabelFont" 
+        -imageOverlayLabel "UVis" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.5 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import AAikman_UnlockVis as aauv\nreload(aauv)\naauv.main()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "import maya.cmds as cmds\n# import maya.mel as mel\n\nsel = cmds.ls(sl=True)\nfrozeTransAlready = 1\n\nfor i in sel:\n    cmds.select(i, r=True)\n    cmds.select(hi=True)\n    if not frozeTransAlready:\n        cmds.makeIdentity(apply=True, t=1, r=1, s=1, n=0, pn=1)\n        # mel.eval(\"performFreezeTransformations(0)\")\n        frozeTransAlready = 1\n    currentNodes = cmds.ls(sl=True)\n    for j in currentNodes:\n        if cmds.objectType(j, isType='nurbsCurve'):\n            try:\n                cmds.parent(j, i, s=True, r=True)\n            except:\n                print 'Could not reparent {}'.format(j)\n    cmds.select(i, r=True)\n    cmds.select(hi=True)\n    nodesToPotentiallyDelete = cmds.ls(sl=True)\n    nodesToPotentiallyDelete.pop(0)\n\n    for k in nodesToPotentiallyDelete:\n        if cmds.objExists(k):\n            if cmds.objectType(k, isType='transform'):\n                cmds.delete(k)\n" 
+        -enableBackground 0
+        -align "center" 
+        -label "import maya.cmds as cmds\n# import maya.mel as mel\n\nsel = cmds.ls..." 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -font "plainLabelFont" 
+        -imageOverlayLabel "FxCrv" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.5 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import maya.cmds as cmds\n# import maya.mel as mel\n\nsel = cmds.ls(sl=True)\nfrozeTransAlready = 1\n\nfor i in sel:\n    cmds.select(i, r=True)\n    cmds.select(hi=True)\n    if not frozeTransAlready:\n        cmds.makeIdentity(apply=True, t=1, r=1, s=1, n=0, pn=1)\n        # mel.eval(\"performFreezeTransformations(0)\")\n        frozeTransAlready = 1\n    currentNodes = cmds.ls(sl=True)\n    for j in currentNodes:\n        if cmds.objectType(j, isType='nurbsCurve'):\n            try:\n                cmds.parent(j, i, s=True, r=True)\n            except:\n                print 'Could not reparent {}'.format(j)\n    cmds.select(i, r=True)\n    cmds.select(hi=True)\n    nodesToPotentiallyDelete = cmds.ls(sl=True)\n    nodesToPotentiallyDelete.pop(0)\n\n    for k in nodesToPotentiallyDelete:\n        if cmds.objExists(k):\n            if cmds.objectType(k, isType='transform'):\n                cmds.delete(k)\n" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "import maya.cmds as cmds\n\nsel = cmds.ls(sl=True)\njointPrev = ''\nfor link in sel:\n    cmds.select(link, r=True)\n    loc = cmds.xform(q=True, piv=True)\n    cmds.select(cl=True)\n    if jointPrev:\n        cmds.select(jointPrev)\n    jointPrev = cmds.joint()\n    cmds.move(loc[0], loc[1], loc[2])" 
+        -enableBackground 0
+        -align "center" 
+        -label "import maya.cmds as cmds\n\nsel = cmds.ls(sl=True)\njointPrev = ''\n..." 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -font "plainLabelFont" 
+        -imageOverlayLabel "JntS" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.5 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import maya.cmds as cmds\n\nsel = cmds.ls(sl=True)\njointPrev = ''\nfor link in sel:\n    cmds.select(link, r=True)\n    loc = cmds.xform(q=True, piv=True)\n    cmds.select(cl=True)\n    if jointPrev:\n        cmds.select(jointPrev)\n    jointPrev = cmds.joint()\n    cmds.move(loc[0], loc[1], loc[2])" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "import AAikman_CircleAtSel as aacas\nreload(aacas)\naacas.main()" 
+        -enableBackground 0
+        -align "center" 
+        -label "import AAikman_CircleAtSel as aacas\nreload(aacas)\naacas.main()" 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -font "plainLabelFont" 
+        -imageOverlayLabel "CirS" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.5 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import AAikman_CircleAtSel as aacas\nreload(aacas)\naacas.main()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "import AAikman_AddAttrToSel as aaaats\nreload(aaaats)\naaaats.main()" 
+        -enableBackground 0
+        -align "center" 
+        -label "import AAikman_AddAttrToSel as aaaats\nreload(aaaats)\naaaats.main..." 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -font "plainLabelFont" 
+        -imageOverlayLabel "AddAtt" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.5 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import AAikman_AddAttrToSel as aaaats\nreload(aaaats)\naaaats.main()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Create a locator object on the grid" 
+        -enableBackground 0
+        -align "center" 
+        -label "Locator" 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.5 
+        -image "locator.png" 
+        -image1 "locator.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "CreateLocator" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "import AAikman_AimConstraintAll as aaaca\nreload(aaaca)\naaaca.main()" 
+        -enableBackground 0
+        -align "center" 
+        -label "import AAikman_AimConstraintAll as aaaca\nreload(aaaca)\naaaca.mai..." 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Aim" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.5 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import AAikman_AimConstraintAll as aaaca\nreload(aaaca)\naaaca.main()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
 
 } 
