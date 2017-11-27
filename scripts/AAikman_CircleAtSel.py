@@ -37,5 +37,6 @@ def main():
         cmds.move(loc[0], loc[1], loc[2])
         cmds.scale(ctrlSize, ctrlSize, ctrlSize)
         mel.eval("performFreezeTransformations(0)")
+        cmds.delete(ch=True)
         cmds.parentConstraint(curCtrlName, i, mo=True)
         
