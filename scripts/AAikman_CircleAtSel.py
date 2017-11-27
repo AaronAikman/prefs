@@ -13,6 +13,8 @@ import AAikman_CircleAtSel as aacas
 reload(aacas)
 aacas.main()
 
+Marking Menu Script
+python( "import AAikman_CircleAtSel as aacas; reload(aacas); aacas.main();" ) 
 '''
 
 import maya.cmds as cmds

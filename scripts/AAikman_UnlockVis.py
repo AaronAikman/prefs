@@ -13,6 +13,9 @@ import AAikman_UnlockVis as aauv
 reload(aauv)
 aauv.main()
 
+Marking Menu Script:
+python("import AAikman_UnlockVis as aauv; reload(aauv); aauv.main();")
+
 '''
 
 import maya.cmds as cmds

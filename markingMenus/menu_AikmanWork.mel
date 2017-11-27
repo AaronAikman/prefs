@@ -47,31 +47,6 @@
             menuEditorMenuItem3;
 
         menuItem
-            -label "CenterPivot" 
-            -divider 0
-            -subMenu 0
-            -tearOff 0
-            -command "CenterPivot;" 
-            -altModifier 0
-            -optionModifier 0
-            -commandModifier 0
-            -ctrlModifier 0
-            -shiftModifier 0
-            -optionBox 0
-            -enable 1
-            -data 0
-            -radialPosition "N" 
-            -allowOptionBoxes 1
-            -postMenuCommandOnce 0
-            -enableCommandRepeat 1
-            -echoCommand 0
-            -italicized 0
-            -boldFont 1
-            -sourceType "mel" 
-            -longDivider 1
-            menuEditorMenuItem4;
-
-        menuItem
             -label "Windows" 
             -divider 0
             -subMenu 1
@@ -631,7 +606,7 @@
                 -optionBox 0
                 -enable 1
                 -data 0
-                -radialPosition "E" 
+                -radialPosition "N" 
                 -allowOptionBoxes 1
                 -postMenuCommandOnce 0
                 -enableCommandRepeat 1
@@ -712,6 +687,31 @@
                 -sourceType "mel" 
                 -longDivider 1
                 menuEditorMenuItem4;
+
+            menuItem
+                -label "Group_ForRigging" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "python( \"import AAikman_GroupUnder as aagu; reload(aagu); aagu.main()\" )" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "E" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -echoCommand 0
+                -italicized 0
+                -boldFont 0
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem5;
 
         setParent -m ..;
 
@@ -948,11 +948,110 @@
         setParent -m ..;
 
         menuItem
-            -label "Non-Deformer History" 
+            -label "Common Mod" 
             -divider 0
-            -subMenu 0
+            -subMenu 1
             -tearOff 0
-            -command "BakeNonDefHistory" 
+            -altModifier 0
+            -optionModifier 0
+            -commandModifier 0
+            -ctrlModifier 0
+            -shiftModifier 0
+            -optionBox 0
+            -enable 1
+            -data 0
+            -radialPosition "N" 
+            -allowOptionBoxes 1
+            -enableCommandRepeat 1
+            -italicized 0
+            -boldFont 0
+            -sourceType "mel" 
+            -longDivider 1
+            menuEditorMenuItem5;
+
+            menuItem
+                -label "CenterPivot" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "CenterPivot;" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "N" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -echoCommand 0
+                -italicized 0
+                -boldFont 0
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem1;
+
+            menuItem
+                -label "FreezeTrans" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "FreezeTransformations;" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "NW" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -echoCommand 0
+                -italicized 0
+                -boldFont 0
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem2;
+
+            menuItem
+                -label "Non-Deformer History" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "BakeNonDefHistory" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "NE" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "menuIconEdit.png" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 0
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem3;
+
+        setParent -m ..;
+
+        menuItem
+            -label "Nodes" 
+            -divider 0
+            -subMenu 1
+            -tearOff 0
             -altModifier 0
             -optionModifier 0
             -commandModifier 0
@@ -963,15 +1062,89 @@
             -data 0
             -radialPosition "NE" 
             -allowOptionBoxes 1
-            -postMenuCommandOnce 0
             -enableCommandRepeat 1
-            -image "menuIconEdit.png" 
-            -echoCommand 0
             -italicized 0
-            -boldFont 1
+            -boldFont 0
             -sourceType "mel" 
             -longDivider 1
-            menuEditorMenuItem2;
+            menuEditorMenuItem8;
+
+            menuItem
+                -label "Lock Node" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "python(\"import AAikman_LockNode as aaln; reload(aaln); aaln.main(1);\")" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "NE" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -echoCommand 0
+                -italicized 0
+                -boldFont 0
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem1;
+
+            menuItem
+                -label "Unlock Node" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "python(\"import AAikman_LockNode as aaln; reload(aaln); aaln.main(0);\")" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "E" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -echoCommand 0
+                -italicized 0
+                -boldFont 0
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem2;
+
+            menuItem
+                -label "Unlock Visibility" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "python(\"import AAikman_UnlockVis as aauv; reload(aauv); aauv.main();\")" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "SE" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -echoCommand 0
+                -italicized 0
+                -boldFont 0
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem3;
+
+        setParent -m ..;
 
     setParent -m ..;
 
@@ -2010,31 +2183,6 @@
         setParent -m ..;
 
         menuItem
-            -label "AutoQuad" 
-            -divider 0
-            -subMenu 0
-            -tearOff 0
-            -command "Triangulate; Quadrangulate;" 
-            -altModifier 0
-            -optionModifier 0
-            -commandModifier 0
-            -ctrlModifier 0
-            -shiftModifier 0
-            -optionBox 0
-            -enable 1
-            -data 0
-            -radialPosition "SW" 
-            -allowOptionBoxes 1
-            -postMenuCommandOnce 0
-            -enableCommandRepeat 1
-            -echoCommand 0
-            -italicized 0
-            -boldFont 1
-            -sourceType "mel" 
-            -longDivider 1
-            menuEditorMenuItem3;
-
-        menuItem
             -label "Instances Materials Renaming" 
             -divider 0
             -subMenu 1
@@ -2256,6 +2404,176 @@
                 -sourceType "mel" 
                 -longDivider 1
                 menuEditorMenuItem8;
+
+        setParent -m ..;
+
+        menuItem
+            -label "UVs" 
+            -divider 0
+            -subMenu 1
+            -tearOff 0
+            -altModifier 0
+            -optionModifier 0
+            -commandModifier 0
+            -ctrlModifier 0
+            -shiftModifier 0
+            -optionBox 0
+            -enable 1
+            -data 0
+            -radialPosition "SW" 
+            -allowOptionBoxes 1
+            -enableCommandRepeat 1
+            -italicized 0
+            -boldFont 0
+            -sourceType "mel" 
+            -longDivider 1
+            menuEditorMenuItem9;
+
+            menuItem
+                -label "Create UVs Based On Cam" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "polyProjection -type Planar -md p" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "N" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -echoCommand 0
+                -italicized 0
+                -boldFont 0
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem1;
+
+            menuItem
+                -label "Merge UVs" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "polyPerformAction \"polyMergeUV -d 0.01\" v 0;" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "E" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "commandButton.png" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 0
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem2;
+
+            menuItem
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 1
+                -enable 1
+                -data 0
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 0
+                -echoCommand 0
+                -italicized 0
+                -boldFont 0
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem3;
+
+            menuItem
+                -label "UVO" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "global proc UVOffset()\n{\n\nif(`window -exists \"UVOffset\"`)\n{\ndeleteUI \"UVOffset\";\n}\n\nwindow UVOffset;\n\ncolumnLayout;\nframeLayout -collapsable 1 -l \"Translation\";\ngridLayout -numberOfColumns 3  -cellWidthHeight 40 40;\nsymbolButton -image \"CCW.bmp\" -command \"UVRotate 1\";\nsymbolButton -image \"Up.bmp\" -command \"UVMove 1\";\nsymbolButton -image \"CW.bmp\" -command \"UVRotate 2\"; \nsymbolButton -image \"Left.bmp\" -command \"UVMove 3\";\nfloatField -w 38 -h 38 -value 1 -pre 3 OffsetValue;\nsymbolButton -image \"Right.bmp\" -command \"UVMove 4\";\nsymbolButton -image \"ScaleU.bmp\" -command \"UVScale 1\";\nsymbolButton -image \"Down.bmp\" -command \"UVMove 2\";\nsymbolButton -image \"ScaleV.bmp\" -command \"UVScale 2\";\n\nsetParent..;\nsetParent..;\n\nframeLayout -collapsable 1 -l \"Tools\";\ngridLayout -numberOfColumns 2 -cellWidthHeight 40 40;\nsymbolButton -image \"ALUVV.bmp\" -command \"AutoLevelUV 1\" -ann \"Auto Level UV Shell on U: Select two UVS as your anchor Points.\";\nsymbolButton -image \"ALUVH.bmp\" -command \"AutoLevelUV 2\" -ann \"Auto Level UV Shell on V: Select two UVS as your anchor Points.\";\nsymbolButton -image \"UNUF.bmp\" -command \"UnitUnfold\" -ann \"Unitize and Unfold : Select Edges for your desired Seams.\";\nsymbolButton -image \"UNLT.bmp\" -command \"UnitLayout\" -ann \"Unitize and Layout : Select Edges for your Seams.\";\nsymbolButton -image \"UnfoldU.bmp\" -command \"UnfoldLimited 1\" -ann \"Unfold U Constraint: UVs stay pinned in U direction.\";\nsymbolButton -image \"UnfoldV.bmp\" -command \"UnfoldLimited 2\" -ann \"Unfold V Constraint: UVs stay pinned in V direction.\";\nsymbolButton -image \"Corner.bmp\" -command \"CornerUnfold\" -ann \"Corner Unfold: Select 4 UVs as anchor points to snap to UV Quadrant Border.\";\n\n\n\nwindow -edit -wh 140 600 UVOffset;\nshowWindow UVOffset;\n}\n\nglobal proc UVMove(int $Direction)\n{\nfloat $moveOffset = `floatField -q -value OffsetValue`; \nswitch($Direction)\n{\ncase 1:\npolyEditUV -v $moveOffset;\nbreak;\n\ncase 2:\npolyEditUV -v ($moveOffset *-1);\nbreak;\n\ncase 3:\npolyEditUV -u ($moveOffset *-1);\nbreak;\n\ncase 4:\npolyEditUV -u $moveOffset;\nbreak;\n\ndefault:\nbreak;\n}\n}\n\n\nglobal proc UVRotate(int $Direction)\n{\nfloat $rotateOffset = `floatField -q -value OffsetValue`;\nswitch($Direction)\n{\ncase 1:\npolyRotateUVs $rotateOffset;\nbreak;\n\ncase 2:\npolyRotateUVs (-1 * $rotateOffset);\nbreak;\n\ndefault:\nbreak;\n}\n}\n\nglobal proc UVScale(int $Direction)\n{\nfloat $scaleOffset = `floatField -q -value OffsetValue`;\nswitch($Direction)\n{\ncase 1:\npolyEditUV -su $scaleOffset;\nbreak;\n\ncase 2:\npolyEditUV -sv $scaleOffset;\nbreak;\n\ndefault:\nbreak;\n}\n}\n\nglobal proc UnfoldLimited(int $Axis)\n{\nswitch($Axis)\n{\ncase 1:\nunfold -i 5000 -ss 0.001 -gb 0 -gmb 0.5 -pub 0 -ps  0 -oa  2 -us off;\nbreak;\n\ncase 2:\nunfold -i 5000 -ss 0.001 -gb 0 -gmb 0.5 -pub 0 -ps  0 -oa  1 -us off;\nbreak;\n\ndefault:\n\nbreak;\n}\n}\n\n\nglobal proc UnitUnfold()\n{\nint $numFaces[] = `polyEvaluate -fc`;\n\nif ($numFaces[0] != 0)\n\n{\n\nstring $Faces[] = `ls -sl`;\n\npolyForceUV -unitize;\n\nselect -r $Faces;\n\nPolySelectConvert 20;\n\nperformPolyMapSewMove 0;\n\nselect -r $Faces;\n\nConvertSelectionToUVs;\n\nunfold -i 500 -ss 0.001 -gb 0 -gmb 0.4397 -pub 0 -ps  0 -us off;\n\nselect -r $Faces;\n\npolyLayoutUV -lm 1 -sc 1 -se 0 -rbf 1 -fr 1 -ps 0.2 -l 2 -ch 1;\n\n}\n\nelse\n\n{\n\nstring $Seam[] = `ls -sl`;\npolySelectSp -ring;\nPolySelectConvert 1;\nstring $Shell[] = `ls -sl`;\npolyForceUV -unitize;\nselect -r $Seam;\npolySelectSp -ring;\nPolySelectConvert 1;\nPolySelectConvert 20;\nselect -d $Seam;\nperformPolyMapSewMove 0;\nselect -r $Shell;\nConvertSelectionToUVs;\nunfold -i 500 -ss 0.001 -gb 0 -gmb 0.4397 -pub 0 -ps  0 -us off;\nselect -r $Shell;\npolyLayoutUV -lm 1 -sc 1 -se 0 -rbf 1 -fr 1 -ps 0.2 -l 2 -ch 1;\n}\n}\n\n\nglobal proc UnitLayout()\n\n{\n\nint $numFaces[] = `polyEvaluate -fc`;\n\nif ($numFaces[0] != 0)\n\n{\n\nstring $Faces[] = `ls -sl`;\n\npolyForceUV -unitize;\n\nselect -r $Faces;\n\nPolySelectConvert 20;\n\nperformPolyMapSewMove 0;\n\nselect -r $Faces;\n\npolyLayoutUV -lm 1 -sc 1 -se 0 -rbf 1 -fr 1 -ps 0.2 -l 2 -ch 1;\n\n}\n\nelse\n\n{\n\nstring $Seam[] = `ls -sl`;\n\npolySelectSp -ring;\n\nPolySelectConvert 1;\n\nstring $Shell[] = `ls -sl`;\n\npolyForceUV -unitize;\n\nselect -r $Seam;\n\npolySelectSp -ring;\n\nPolySelectConvert 1;\n\nPolySelectConvert 20;\n\nselect -d $Seam;\n\nperformPolyMapSewMove 0;\n\nselect -r $Shell;\n\npolyLayoutUV -lm 1 -sc 1 -se 0 -rbf 1 -fr 1 -ps 0.2 -l 2 -ch 1;\n\n}\n\n}\n\n\nglobal proc AutoLevelUV(int $Orient)\n{\nstring $BaseUVS[] = `ls -sl`;\n\nswitch($Orient)\n{\ncase 1:\n\nalignUV 0 0 1 1;\n\nbreak;\n\ncase 2:\n\nalignUV 1 1 0 0;\n\nbreak;\n\ndefault:\n\nbreak;\n}\npolySelectBorderShell 0;\nselect -d $BaseUVS;\n\nunfold -i 500 -ss 0.001 -gb 0 -gmb 0.4397 -pub 0 -ps  0 -us off;\n}\n\nglobal proc CornerUnfold()\n{\nscriptJob -ro 1 -e \"SelectionChanged\" \"CUMove1\";\nglobal string $CUCORNERS[];\n}\n\nglobal proc CUMove1()\n{\nglobal string $CUCORNERS[];\n$CUCORNERS = `ls -sl -fl`;\npolyEditUV -u 0 -v 0 -r false $CUCORNERS;\nscriptJob -ro 1 -e \"SelectionChanged\" \"CUMove2\";\n}\n\nglobal proc CUMove2()\n{\nglobal string $CUCORNERS[];\nstring $uvCorner2[] = `ls -sl -fl`;\nappendStringArray($CUCORNERS, $uvCorner2, `size $uvCorner2`);\npolyEditUV -u 0 -v 1 -r false $uvCorner2;\nscriptJob -ro 1 -e \"SelectionChanged\" \"CUMove3\";\n}\n\nglobal proc CUMove3()\n{\nglobal string $CUCORNERS[];\nstring $uvCorner3[] = `ls -sl -fl`;\nappendStringArray($CUCORNERS, $uvCorner3, `size $uvCorner3`);\npolyEditUV -u 1 -v 1 -r false $uvCorner3;\nscriptJob -ro 1 -e \"SelectionChanged\" \"CUMove4\";\n}\n\nglobal proc CUMove4()\n{\nglobal string $CUCORNERS[];\nstring $uvCorner4[] = `ls -sl -fl`;\nappendStringArray($CUCORNERS, $uvCorner4, `size $uvCorner4`);\npolyEditUV -u 1 -v 0 -r false $uvCorner4;\npolySelectBorderShell 0;\nselect -d $CUCORNERS;\nunfold -i 500 -ss 0.001 -gb 0 -gmb 0.4397 -pub 0 -ps  0 -us off;\n}\n\nUVOffset();" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "S" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -echoCommand 0
+                -italicized 0
+                -boldFont 0
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem4;
+
+            menuItem
+                -label "UVOffset" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "source \"C:/Users/aaikman/Documents/maya/2016/prefs/scripts/AA/UVOffset.mel\"; UVOffset();" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "SW" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "commandButton.png" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 0
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem5;
+
+            menuItem
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 1
+                -enable 1
+                -data 0
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 0
+                -echoCommand 0
+                -italicized 0
+                -boldFont 0
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem6;
 
         setParent -m ..;
 
@@ -4293,176 +4611,6 @@
         setParent -m ..;
 
         menuItem
-            -label "UVS" 
-            -divider 0
-            -subMenu 1
-            -tearOff 0
-            -altModifier 0
-            -optionModifier 0
-            -commandModifier 0
-            -ctrlModifier 0
-            -shiftModifier 0
-            -optionBox 0
-            -enable 1
-            -data 0
-            -radialPosition "NE" 
-            -allowOptionBoxes 1
-            -enableCommandRepeat 1
-            -italicized 0
-            -boldFont 1
-            -sourceType "mel" 
-            -longDivider 1
-            menuEditorMenuItem1;
-
-            menuItem
-                -label "Create UVs Based On Cam" 
-                -divider 0
-                -subMenu 0
-                -tearOff 0
-                -command "polyProjection -type Planar -md p" 
-                -altModifier 0
-                -optionModifier 0
-                -commandModifier 0
-                -ctrlModifier 0
-                -shiftModifier 0
-                -optionBox 0
-                -enable 1
-                -data 0
-                -radialPosition "N" 
-                -allowOptionBoxes 1
-                -postMenuCommandOnce 0
-                -enableCommandRepeat 1
-                -echoCommand 0
-                -italicized 0
-                -boldFont 1
-                -sourceType "mel" 
-                -longDivider 1
-                menuEditorMenuItem1;
-
-            menuItem
-                -label "Merge UVs" 
-                -divider 0
-                -subMenu 0
-                -tearOff 0
-                -command "polyPerformAction \"polyMergeUV -d 0.01\" v 0;" 
-                -altModifier 0
-                -optionModifier 0
-                -commandModifier 0
-                -ctrlModifier 0
-                -shiftModifier 0
-                -optionBox 0
-                -enable 1
-                -data 0
-                -radialPosition "E" 
-                -allowOptionBoxes 1
-                -postMenuCommandOnce 0
-                -enableCommandRepeat 1
-                -image "commandButton.png" 
-                -echoCommand 0
-                -italicized 0
-                -boldFont 1
-                -sourceType "mel" 
-                -longDivider 1
-                menuEditorMenuItem2;
-
-            menuItem
-                -label "menuEditorMenuItem3" 
-                -divider 0
-                -subMenu 0
-                -tearOff 0
-                -altModifier 0
-                -optionModifier 0
-                -commandModifier 0
-                -ctrlModifier 0
-                -shiftModifier 0
-                -optionBox 1
-                -enable 1
-                -data 0
-                -allowOptionBoxes 1
-                -postMenuCommandOnce 0
-                -enableCommandRepeat 0
-                -italicized 0
-                -boldFont 1
-                -sourceType "mel" 
-                -longDivider 1
-                menuEditorMenuItem3;
-
-            menuItem
-                -label "UVOffset" 
-                -divider 0
-                -subMenu 0
-                -tearOff 0
-                -command "source \"C:/Users/aaikman/Documents/maya/2016/prefs/scripts/AA/UVOffset.mel\"; UVOffset();" 
-                -altModifier 0
-                -optionModifier 0
-                -commandModifier 0
-                -ctrlModifier 0
-                -shiftModifier 0
-                -optionBox 0
-                -enable 1
-                -data 0
-                -radialPosition "SW" 
-                -allowOptionBoxes 1
-                -postMenuCommandOnce 0
-                -enableCommandRepeat 1
-                -image "commandButton.png" 
-                -echoCommand 0
-                -italicized 0
-                -boldFont 1
-                -sourceType "mel" 
-                -longDivider 1
-                menuEditorMenuItem4;
-
-            menuItem
-                -label "menuEditorMenuItem5" 
-                -divider 0
-                -subMenu 0
-                -tearOff 0
-                -altModifier 0
-                -optionModifier 0
-                -commandModifier 0
-                -ctrlModifier 0
-                -shiftModifier 0
-                -optionBox 1
-                -enable 1
-                -data 0
-                -allowOptionBoxes 1
-                -postMenuCommandOnce 0
-                -enableCommandRepeat 0
-                -italicized 0
-                -boldFont 1
-                -sourceType "mel" 
-                -longDivider 1
-                menuEditorMenuItem5;
-
-            menuItem
-                -label "UVO" 
-                -divider 0
-                -subMenu 0
-                -tearOff 0
-                -command "global proc UVOffset()\n{\n\nif(`window -exists \"UVOffset\"`)\n{\ndeleteUI \"UVOffset\";\n}\n\nwindow UVOffset;\n\ncolumnLayout;\nframeLayout -collapsable 1 -l \"Translation\";\ngridLayout -numberOfColumns 3  -cellWidthHeight 40 40;\nsymbolButton -image \"CCW.bmp\" -command \"UVRotate 1\";\nsymbolButton -image \"Up.bmp\" -command \"UVMove 1\";\nsymbolButton -image \"CW.bmp\" -command \"UVRotate 2\"; \nsymbolButton -image \"Left.bmp\" -command \"UVMove 3\";\nfloatField -w 38 -h 38 -value 1 -pre 3 OffsetValue;\nsymbolButton -image \"Right.bmp\" -command \"UVMove 4\";\nsymbolButton -image \"ScaleU.bmp\" -command \"UVScale 1\";\nsymbolButton -image \"Down.bmp\" -command \"UVMove 2\";\nsymbolButton -image \"ScaleV.bmp\" -command \"UVScale 2\";\n\nsetParent..;\nsetParent..;\n\nframeLayout -collapsable 1 -l \"Tools\";\ngridLayout -numberOfColumns 2 -cellWidthHeight 40 40;\nsymbolButton -image \"ALUVV.bmp\" -command \"AutoLevelUV 1\" -ann \"Auto Level UV Shell on U: Select two UVS as your anchor Points.\";\nsymbolButton -image \"ALUVH.bmp\" -command \"AutoLevelUV 2\" -ann \"Auto Level UV Shell on V: Select two UVS as your anchor Points.\";\nsymbolButton -image \"UNUF.bmp\" -command \"UnitUnfold\" -ann \"Unitize and Unfold : Select Edges for your desired Seams.\";\nsymbolButton -image \"UNLT.bmp\" -command \"UnitLayout\" -ann \"Unitize and Layout : Select Edges for your Seams.\";\nsymbolButton -image \"UnfoldU.bmp\" -command \"UnfoldLimited 1\" -ann \"Unfold U Constraint: UVs stay pinned in U direction.\";\nsymbolButton -image \"UnfoldV.bmp\" -command \"UnfoldLimited 2\" -ann \"Unfold V Constraint: UVs stay pinned in V direction.\";\nsymbolButton -image \"Corner.bmp\" -command \"CornerUnfold\" -ann \"Corner Unfold: Select 4 UVs as anchor points to snap to UV Quadrant Border.\";\n\n\n\nwindow -edit -wh 140 600 UVOffset;\nshowWindow UVOffset;\n}\n\nglobal proc UVMove(int $Direction)\n{\nfloat $moveOffset = `floatField -q -value OffsetValue`; \nswitch($Direction)\n{\ncase 1:\npolyEditUV -v $moveOffset;\nbreak;\n\ncase 2:\npolyEditUV -v ($moveOffset *-1);\nbreak;\n\ncase 3:\npolyEditUV -u ($moveOffset *-1);\nbreak;\n\ncase 4:\npolyEditUV -u $moveOffset;\nbreak;\n\ndefault:\nbreak;\n}\n}\n\n\nglobal proc UVRotate(int $Direction)\n{\nfloat $rotateOffset = `floatField -q -value OffsetValue`;\nswitch($Direction)\n{\ncase 1:\npolyRotateUVs $rotateOffset;\nbreak;\n\ncase 2:\npolyRotateUVs (-1 * $rotateOffset);\nbreak;\n\ndefault:\nbreak;\n}\n}\n\nglobal proc UVScale(int $Direction)\n{\nfloat $scaleOffset = `floatField -q -value OffsetValue`;\nswitch($Direction)\n{\ncase 1:\npolyEditUV -su $scaleOffset;\nbreak;\n\ncase 2:\npolyEditUV -sv $scaleOffset;\nbreak;\n\ndefault:\nbreak;\n}\n}\n\nglobal proc UnfoldLimited(int $Axis)\n{\nswitch($Axis)\n{\ncase 1:\nunfold -i 5000 -ss 0.001 -gb 0 -gmb 0.5 -pub 0 -ps  0 -oa  2 -us off;\nbreak;\n\ncase 2:\nunfold -i 5000 -ss 0.001 -gb 0 -gmb 0.5 -pub 0 -ps  0 -oa  1 -us off;\nbreak;\n\ndefault:\n\nbreak;\n}\n}\n\n\nglobal proc UnitUnfold()\n{\nint $numFaces[] = `polyEvaluate -fc`;\n\nif ($numFaces[0] != 0)\n\n{\n\nstring $Faces[] = `ls -sl`;\n\npolyForceUV -unitize;\n\nselect -r $Faces;\n\nPolySelectConvert 20;\n\nperformPolyMapSewMove 0;\n\nselect -r $Faces;\n\nConvertSelectionToUVs;\n\nunfold -i 500 -ss 0.001 -gb 0 -gmb 0.4397 -pub 0 -ps  0 -us off;\n\nselect -r $Faces;\n\npolyLayoutUV -lm 1 -sc 1 -se 0 -rbf 1 -fr 1 -ps 0.2 -l 2 -ch 1;\n\n}\n\nelse\n\n{\n\nstring $Seam[] = `ls -sl`;\npolySelectSp -ring;\nPolySelectConvert 1;\nstring $Shell[] = `ls -sl`;\npolyForceUV -unitize;\nselect -r $Seam;\npolySelectSp -ring;\nPolySelectConvert 1;\nPolySelectConvert 20;\nselect -d $Seam;\nperformPolyMapSewMove 0;\nselect -r $Shell;\nConvertSelectionToUVs;\nunfold -i 500 -ss 0.001 -gb 0 -gmb 0.4397 -pub 0 -ps  0 -us off;\nselect -r $Shell;\npolyLayoutUV -lm 1 -sc 1 -se 0 -rbf 1 -fr 1 -ps 0.2 -l 2 -ch 1;\n}\n}\n\n\nglobal proc UnitLayout()\n\n{\n\nint $numFaces[] = `polyEvaluate -fc`;\n\nif ($numFaces[0] != 0)\n\n{\n\nstring $Faces[] = `ls -sl`;\n\npolyForceUV -unitize;\n\nselect -r $Faces;\n\nPolySelectConvert 20;\n\nperformPolyMapSewMove 0;\n\nselect -r $Faces;\n\npolyLayoutUV -lm 1 -sc 1 -se 0 -rbf 1 -fr 1 -ps 0.2 -l 2 -ch 1;\n\n}\n\nelse\n\n{\n\nstring $Seam[] = `ls -sl`;\n\npolySelectSp -ring;\n\nPolySelectConvert 1;\n\nstring $Shell[] = `ls -sl`;\n\npolyForceUV -unitize;\n\nselect -r $Seam;\n\npolySelectSp -ring;\n\nPolySelectConvert 1;\n\nPolySelectConvert 20;\n\nselect -d $Seam;\n\nperformPolyMapSewMove 0;\n\nselect -r $Shell;\n\npolyLayoutUV -lm 1 -sc 1 -se 0 -rbf 1 -fr 1 -ps 0.2 -l 2 -ch 1;\n\n}\n\n}\n\n\nglobal proc AutoLevelUV(int $Orient)\n{\nstring $BaseUVS[] = `ls -sl`;\n\nswitch($Orient)\n{\ncase 1:\n\nalignUV 0 0 1 1;\n\nbreak;\n\ncase 2:\n\nalignUV 1 1 0 0;\n\nbreak;\n\ndefault:\n\nbreak;\n}\npolySelectBorderShell 0;\nselect -d $BaseUVS;\n\nunfold -i 500 -ss 0.001 -gb 0 -gmb 0.4397 -pub 0 -ps  0 -us off;\n}\n\nglobal proc CornerUnfold()\n{\nscriptJob -ro 1 -e \"SelectionChanged\" \"CUMove1\";\nglobal string $CUCORNERS[];\n}\n\nglobal proc CUMove1()\n{\nglobal string $CUCORNERS[];\n$CUCORNERS = `ls -sl -fl`;\npolyEditUV -u 0 -v 0 -r false $CUCORNERS;\nscriptJob -ro 1 -e \"SelectionChanged\" \"CUMove2\";\n}\n\nglobal proc CUMove2()\n{\nglobal string $CUCORNERS[];\nstring $uvCorner2[] = `ls -sl -fl`;\nappendStringArray($CUCORNERS, $uvCorner2, `size $uvCorner2`);\npolyEditUV -u 0 -v 1 -r false $uvCorner2;\nscriptJob -ro 1 -e \"SelectionChanged\" \"CUMove3\";\n}\n\nglobal proc CUMove3()\n{\nglobal string $CUCORNERS[];\nstring $uvCorner3[] = `ls -sl -fl`;\nappendStringArray($CUCORNERS, $uvCorner3, `size $uvCorner3`);\npolyEditUV -u 1 -v 1 -r false $uvCorner3;\nscriptJob -ro 1 -e \"SelectionChanged\" \"CUMove4\";\n}\n\nglobal proc CUMove4()\n{\nglobal string $CUCORNERS[];\nstring $uvCorner4[] = `ls -sl -fl`;\nappendStringArray($CUCORNERS, $uvCorner4, `size $uvCorner4`);\npolyEditUV -u 1 -v 0 -r false $uvCorner4;\npolySelectBorderShell 0;\nselect -d $CUCORNERS;\nunfold -i 500 -ss 0.001 -gb 0 -gmb 0.4397 -pub 0 -ps  0 -us off;\n}\n\nUVOffset();" 
-                -altModifier 0
-                -optionModifier 0
-                -commandModifier 0
-                -ctrlModifier 0
-                -shiftModifier 0
-                -optionBox 0
-                -enable 1
-                -data 0
-                -radialPosition "S" 
-                -allowOptionBoxes 1
-                -postMenuCommandOnce 0
-                -enableCommandRepeat 1
-                -echoCommand 0
-                -italicized 0
-                -boldFont 1
-                -sourceType "mel" 
-                -longDivider 1
-                menuEditorMenuItem6;
-
-        setParent -m ..;
-
-        menuItem
             -label "Animation" 
             -divider 0
             -subMenu 1
@@ -4786,7 +4934,7 @@
                 -image "kinHandle.png" 
                 -echoCommand 0
                 -italicized 0
-                -boldFont 0
+                -boldFont 1
                 -sourceType "mel" 
                 -longDivider 1
                 menuEditorMenuItem3;
@@ -5673,6 +5821,155 @@
                 -sourceType "mel" 
                 -longDivider 1
                 menuEditorMenuItem1;
+
+        setParent -m ..;
+
+        menuItem
+            -label "Custom" 
+            -divider 0
+            -subMenu 1
+            -tearOff 0
+            -altModifier 0
+            -optionModifier 0
+            -commandModifier 0
+            -ctrlModifier 0
+            -shiftModifier 0
+            -optionBox 0
+            -enable 1
+            -data 0
+            -radialPosition "NE" 
+            -allowOptionBoxes 1
+            -enableCommandRepeat 1
+            -italicized 0
+            -boldFont 0
+            -sourceType "mel" 
+            -longDivider 1
+            menuEditorMenuItem1;
+
+            menuItem
+                -label "Joint Sel" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "python( \"import AAikman_CreateJointAtSel as aajs; reload(aajs); aajs.main;\")" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "NE" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -echoCommand 0
+                -italicized 0
+                -boldFont 0
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem2;
+
+            menuItem
+                -label "Circle Sel" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "python( \"import AAikman_CircleAtSel as aacas; reload(aacas); aacas.main();\" ) " 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "N" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -echoCommand 0
+                -italicized 0
+                -boldFont 0
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem3;
+
+            menuItem
+                -label "Aim Constrain All" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "python(\"import AAikman_AimConstraintAll as aaaca; reload(aaaca); aaaca.main();\")" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "E" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -echoCommand 0
+                -italicized 0
+                -boldFont 0
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem4;
+
+            menuItem
+                -label "Add Attributes" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "python(\"import AAikman_AddAttrToSel as aaaats; reload(aaaats); aaaats.main();\")" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "SE" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -echoCommand 0
+                -italicized 0
+                -boldFont 0
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem5;
+
+            menuItem
+                -label "Fix Curve Parenting" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "python(\"import AAikman_FixCurveParenting as aafcp; reload(aafcp); aafcp.main();\")" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "S" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -echoCommand 0
+                -italicized 0
+                -boldFont 0
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem6;
 
         setParent -m ..;
 

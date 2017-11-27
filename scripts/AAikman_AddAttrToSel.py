@@ -15,6 +15,9 @@ import AAikman_AddAttrToSel as aaaats
 reload(aaaats)
 aaaats.main()
 
+Marking Menu Script:
+python("import AAikman_AddAttrToSel as aaaats; reload(aaaats); aaaats.main();")
+
 '''
 
 import maya.cmds as cmds

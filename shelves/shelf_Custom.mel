@@ -1062,7 +1062,7 @@ global proc shelf_Custom () {
         -style "iconOnly" 
         -marginWidth 1
         -marginHeight 1
-        -command "import maya.cmds as cmds\n# import maya.mel as mel\n\nsel = cmds.ls(sl=True)\nfrozeTransAlready = 1\n\nfor i in sel:\n    cmds.select(i, r=True)\n    cmds.select(hi=True)\n    if not frozeTransAlready:\n        cmds.makeIdentity(apply=True, t=1, r=1, s=1, n=0, pn=1)\n        # mel.eval(\"performFreezeTransformations(0)\")\n        frozeTransAlready = 1\n    currentNodes = cmds.ls(sl=True)\n    for j in currentNodes:\n        if cmds.objectType(j, isType='nurbsCurve'):\n            try:\n                cmds.parent(j, i, s=True, r=True)\n            except:\n                print 'Could not reparent {}'.format(j)\n    cmds.select(i, r=True)\n    cmds.select(hi=True)\n    nodesToPotentiallyDelete = cmds.ls(sl=True)\n    nodesToPotentiallyDelete.pop(0)\n\n    for k in nodesToPotentiallyDelete:\n        if cmds.objExists(k):\n            if cmds.objectType(k, isType='transform'):\n                cmds.delete(k)\n" 
+        -command "import AAikman_FixCurveParenting as aafcp\nreload(aafcp)\naafcp.main()" 
         -sourceType "python" 
         -commandRepeatable 1
         -flat 1
@@ -1093,7 +1093,7 @@ global proc shelf_Custom () {
         -style "iconOnly" 
         -marginWidth 1
         -marginHeight 1
-        -command "import maya.cmds as cmds\n\nsel = cmds.ls(sl=True)\njointPrev = ''\nfor link in sel:\n    cmds.select(link, r=True)\n    loc = cmds.xform(q=True, piv=True)\n    cmds.select(cl=True)\n    if jointPrev:\n        cmds.select(jointPrev)\n    jointPrev = cmds.joint()\n    cmds.move(loc[0], loc[1], loc[2])" 
+        -command "import AAikman_CreateJointAtSel as aajs\nreload(aajs)\naajs.main()" 
         -sourceType "python" 
         -commandRepeatable 1
         -flat 1

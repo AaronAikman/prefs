@@ -15,6 +15,9 @@ import AAikman_AimConstraintAll as aaaca
 reload(aaaca)
 aaaca.main()
 
+Marking Menu Script:
+python("import AAikman_AimConstraintAll as aaaca; reload(aaaca); aaaca.main();")
+
 '''
 import maya.cmds as cmds
 from AAikman_Utils import snapTo

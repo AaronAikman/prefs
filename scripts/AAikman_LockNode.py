@@ -13,6 +13,9 @@ import AAikman_LockNode as aaln
 reload(aaln)
 aaln.main(0)
 
+Marking Menu Script:
+python("import AAikman_LockNode as aaln; reload(aaln); aaln.main(1);")
+
 '''
 
 import maya.cmds as cmds
