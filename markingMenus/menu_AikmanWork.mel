@@ -409,7 +409,7 @@
                 -optionBox 0
                 -enable 1
                 -data 0
-                -radialPosition "N" 
+                -radialPosition "E" 
                 -allowOptionBoxes 1
                 -postMenuCommandOnce 0
                 -enableCommandRepeat 1
@@ -505,7 +505,7 @@
                 -optionBox 0
                 -enable 1
                 -data 0
-                -radialPosition "E" 
+                -radialPosition "N" 
                 -allowOptionBoxes 1
                 -postMenuCommandOnce 0
                 -enableCommandRepeat 1
@@ -868,7 +868,7 @@
                 -enableCommandRepeat 1
                 -echoCommand 0
                 -italicized 0
-                -boldFont 0
+                -boldFont 1
                 -sourceType "mel" 
                 -longDivider 1
                 menuEditorMenuItem4;
@@ -991,7 +991,7 @@
             -allowOptionBoxes 1
             -enableCommandRepeat 1
             -italicized 0
-            -boldFont 0
+            -boldFont 1
             -sourceType "mel" 
             -longDivider 1
             menuEditorMenuItem2;
@@ -1016,7 +1016,7 @@
                 -enableCommandRepeat 1
                 -echoCommand 0
                 -italicized 0
-                -boldFont 0
+                -boldFont 1
                 -sourceType "mel" 
                 -longDivider 1
                 menuEditorMenuItem1;
@@ -1041,7 +1041,7 @@
                 -enableCommandRepeat 1
                 -echoCommand 0
                 -italicized 0
-                -boldFont 0
+                -boldFont 1
                 -sourceType "mel" 
                 -longDivider 1
                 menuEditorMenuItem2;
@@ -1066,7 +1066,7 @@
                 -enableCommandRepeat 1
                 -echoCommand 0
                 -italicized 0
-                -boldFont 0
+                -boldFont 1
                 -sourceType "mel" 
                 -longDivider 1
                 menuEditorMenuItem3;
@@ -1091,7 +1091,7 @@
                 -enableCommandRepeat 1
                 -echoCommand 0
                 -italicized 0
-                -boldFont 0
+                -boldFont 1
                 -sourceType "mel" 
                 -longDivider 1
                 menuEditorMenuItem6;
@@ -2521,7 +2521,7 @@
             -allowOptionBoxes 1
             -enableCommandRepeat 1
             -italicized 0
-            -boldFont 0
+            -boldFont 1
             -sourceType "mel" 
             -longDivider 1
             menuEditorMenuItem1;
@@ -2547,12 +2547,13 @@
                 -image "commandButton.png" 
                 -echoCommand 0
                 -italicized 0
-                -boldFont 0
+                -boldFont 1
                 -sourceType "mel" 
                 -longDivider 1
                 menuEditorMenuItem1;
 
             menuItem
+                -label "menuEditorMenuItem2" 
                 -divider 0
                 -subMenu 0
                 -tearOff 0
@@ -2567,9 +2568,8 @@
                 -allowOptionBoxes 1
                 -postMenuCommandOnce 0
                 -enableCommandRepeat 0
-                -echoCommand 0
                 -italicized 0
-                -boldFont 0
+                -boldFont 1
                 -sourceType "mel" 
                 -longDivider 1
                 menuEditorMenuItem2;
@@ -2595,7 +2595,7 @@
                 -image "commandButton.png" 
                 -echoCommand 0
                 -italicized 0
-                -boldFont 0
+                -boldFont 1
                 -sourceType "mel" 
                 -longDivider 1
                 menuEditorMenuItem3;
@@ -2621,12 +2621,13 @@
                 -image "commandButton.png" 
                 -echoCommand 0
                 -italicized 0
-                -boldFont 0
+                -boldFont 1
                 -sourceType "mel" 
                 -longDivider 1
                 menuEditorMenuItem4;
 
             menuItem
+                -label "menuEditorMenuItem5" 
                 -divider 0
                 -subMenu 0
                 -tearOff 0
@@ -2641,9 +2642,8 @@
                 -allowOptionBoxes 1
                 -postMenuCommandOnce 0
                 -enableCommandRepeat 0
-                -echoCommand 0
                 -italicized 0
-                -boldFont 0
+                -boldFont 1
                 -sourceType "mel" 
                 -longDivider 1
                 menuEditorMenuItem5;
@@ -2669,7 +2669,7 @@
                 -image "menuIconModify.png" 
                 -echoCommand 0
                 -italicized 0
-                -boldFont 0
+                -boldFont 1
                 -sourceType "mel" 
                 -longDivider 1
                 menuEditorMenuItem6;
@@ -4006,7 +4006,7 @@
     setParent -m ..;
 
     menuItem
-        -label "Instances" 
+        -label "Selection" 
         -divider 0
         -subMenu 1
         -tearOff 0
@@ -4100,6 +4100,31 @@
             -sourceType "mel" 
             -longDivider 1
             menuEditorMenuItem10;
+
+        menuItem
+            -label "Swap Selection" 
+            -divider 0
+            -subMenu 0
+            -tearOff 0
+            -command "python(\"import AAikman_SwapSelection as aaSwapSel; reload(aaSwapSel); aaSwapSel.main();\")" 
+            -altModifier 0
+            -optionModifier 0
+            -commandModifier 0
+            -ctrlModifier 0
+            -shiftModifier 0
+            -optionBox 0
+            -enable 1
+            -data 0
+            -radialPosition "N" 
+            -allowOptionBoxes 1
+            -postMenuCommandOnce 0
+            -enableCommandRepeat 1
+            -echoCommand 0
+            -italicized 0
+            -boldFont 0
+            -sourceType "mel" 
+            -longDivider 1
+            menuEditorMenuItem1;
 
     setParent -m ..;
 
