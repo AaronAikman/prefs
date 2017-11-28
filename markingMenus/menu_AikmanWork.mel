@@ -2010,7 +2010,7 @@
         setParent -m ..;
 
         menuItem
-            -label "Combine Options" 
+            -label "Combine" 
             -divider 0
             -subMenu 1
             -tearOff 0
@@ -2146,7 +2146,7 @@
                 -optionBox 0
                 -enable 1
                 -data 0
-                -radialPosition "N" 
+                -radialPosition "SE" 
                 -allowOptionBoxes 1
                 -postMenuCommandOnce 0
                 -enableCommandRepeat 1
@@ -2171,7 +2171,7 @@
                 -optionBox 0
                 -enable 1
                 -data 0
-                -radialPosition "SE" 
+                -radialPosition "E" 
                 -allowOptionBoxes 1
                 -postMenuCommandOnce 0
                 -enableCommandRepeat 1
@@ -2196,7 +2196,7 @@
                 -optionBox 0
                 -enable 1
                 -data 0
-                -radialPosition "E" 
+                -radialPosition "NE" 
                 -allowOptionBoxes 1
                 -postMenuCommandOnce 0
                 -enableCommandRepeat 1
@@ -2221,7 +2221,7 @@
                 -optionBox 0
                 -enable 1
                 -data 0
-                -radialPosition "NW" 
+                -radialPosition "N" 
                 -allowOptionBoxes 1
                 -postMenuCommandOnce 0
                 -enableCommandRepeat 1
@@ -2233,11 +2233,11 @@
                 menuEditorMenuItem6;
 
             menuItem
-                -label "Mirror Obj" 
+                -label "Mirror X" 
                 -divider 0
                 -subMenu 0
                 -tearOff 0
-                -command "python(\"import AAikman_MirrorObj as aaMirrorObj; reload(aaMirrorObj); aaMirrorObj.main();\")\n" 
+                -command "python(\"import AAikman_MirrorObj as aaMirrorObj; reload(aaMirrorObj); aaMirrorObj.main();\")" 
                 -altModifier 0
                 -optionModifier 0
                 -commandModifier 0
@@ -2256,6 +2256,81 @@
                 -sourceType "mel" 
                 -longDivider 1
                 menuEditorMenuItem1;
+
+            menuItem
+                -label "Mirror X" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "python(\"import AAikman_MirrorObj as aaMirrorObj; reload(aaMirrorObj); aaMirrorObj.main();\")" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "NW" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -echoCommand 0
+                -italicized 0
+                -boldFont 0
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem2;
+
+            menuItem
+                -label "Mirror Y" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "python(\"import AAikman_MirrorObj as aaMirrorObj; reload(aaMirrorObj); aaMirrorObj.main([1,-1,1]);\")" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "W" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -echoCommand 0
+                -italicized 0
+                -boldFont 0
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem7;
+
+            menuItem
+                -label "Mirror Z" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "python(\"import AAikman_MirrorObj as aaMirrorObj; reload(aaMirrorObj); aaMirrorObj.main([1,1,-1]);\")" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "SW" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -echoCommand 0
+                -italicized 0
+                -boldFont 0
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem8;
 
         setParent -m ..;
 
@@ -2624,55 +2699,6 @@
             menuEditorMenuItem8;
 
             menuItem
-                -label "Transform Components" 
-                -divider 0
-                -subMenu 0
-                -tearOff 0
-                -command "performPolyMove \"\" 0" 
-                -altModifier 0
-                -optionModifier 0
-                -commandModifier 0
-                -ctrlModifier 0
-                -shiftModifier 0
-                -optionBox 0
-                -enable 1
-                -data 0
-                -radialPosition "S" 
-                -allowOptionBoxes 1
-                -postMenuCommandOnce 0
-                -enableCommandRepeat 1
-                -image "polyMoveVertex.png" 
-                -echoCommand 0
-                -italicized 0
-                -boldFont 0
-                -sourceType "mel" 
-                -longDivider 1
-                menuEditorMenuItem1;
-
-            menuItem
-                -divider 0
-                -subMenu 0
-                -tearOff 0
-                -command "MovePolygonComponentOptions" 
-                -altModifier 0
-                -optionModifier 0
-                -commandModifier 0
-                -ctrlModifier 0
-                -shiftModifier 0
-                -optionBox 1
-                -enable 1
-                -data 0
-                -allowOptionBoxes 1
-                -postMenuCommandOnce 0
-                -enableCommandRepeat 0
-                -echoCommand 0
-                -italicized 0
-                -boldFont 0
-                -sourceType "mel" 
-                -longDivider 1
-                menuEditorMenuItem2;
-
-            menuItem
                 -label "Assign New Lambert" 
                 -divider 0
                 -subMenu 0
@@ -2686,7 +2712,7 @@
                 -optionBox 0
                 -enable 1
                 -data 0
-                -radialPosition "W" 
+                -radialPosition "S" 
                 -allowOptionBoxes 1
                 -postMenuCommandOnce 0
                 -enableCommandRepeat 1
@@ -2711,7 +2737,7 @@
                 -optionBox 0
                 -enable 1
                 -data 0
-                -radialPosition "NW" 
+                -radialPosition "SW" 
                 -allowOptionBoxes 1
                 -postMenuCommandOnce 0
                 -enableCommandRepeat 1
@@ -3420,6 +3446,55 @@
                 menuEditorMenuItem16;
 
         setParent -m ..;
+
+        menuItem
+            -label "Transform Components" 
+            -divider 0
+            -subMenu 0
+            -tearOff 0
+            -command "performPolyMove \"\" 0" 
+            -altModifier 0
+            -optionModifier 0
+            -commandModifier 0
+            -ctrlModifier 0
+            -shiftModifier 0
+            -optionBox 0
+            -enable 1
+            -data 0
+            -radialPosition "S" 
+            -allowOptionBoxes 1
+            -postMenuCommandOnce 0
+            -enableCommandRepeat 1
+            -image "polyMoveVertex.png" 
+            -echoCommand 0
+            -italicized 0
+            -boldFont 0
+            -sourceType "mel" 
+            -longDivider 1
+            menuEditorMenuItem6;
+
+        menuItem
+            -divider 0
+            -subMenu 0
+            -tearOff 0
+            -command "MovePolygonComponentOptions" 
+            -altModifier 0
+            -optionModifier 0
+            -commandModifier 0
+            -ctrlModifier 0
+            -shiftModifier 0
+            -optionBox 1
+            -enable 1
+            -data 0
+            -allowOptionBoxes 1
+            -postMenuCommandOnce 0
+            -enableCommandRepeat 0
+            -echoCommand 0
+            -italicized 0
+            -boldFont 0
+            -sourceType "mel" 
+            -longDivider 1
+            menuEditorMenuItem7;
 
     setParent -m ..;
 
