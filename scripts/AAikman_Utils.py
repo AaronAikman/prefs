@@ -24,7 +24,7 @@ def snapTo(par, chi, constrType=3):
 		cmds.scaleConstraint(mo=False, n=constrName)
 
 	cmds.delete(constrName)
-	cmds.select(cl=True)
+	# cmds.select(cl=True)
 
 
 def doSnap(snapType = 3):

@@ -30,6 +30,7 @@ def main(dir = [-1,1,1]):
     r = '_R'
     for i in sel:
         oI = i
+        cmds.select(i, r=True)
         if l in i:
             dupName = i.replace(l, r)
             if cmds.objExists(dupName):
@@ -41,15 +42,8 @@ def main(dir = [-1,1,1]):
                 cmds.delete(dupName)
             cmds.duplicate(n=dupName)
         else:
-            renamedObj = False
-            iterStart = 1
-            while not renamedObj:
-                try:
-                    dupName = '{}_{}'.format(i, iterStart)
-                    cmds.duplicate(n=dupName)
-                    renamedObj = True
-                except:
-                    iterStart += 1
+            cmds.duplicate()
+            dupName = cmds.ls(sl=True)[0]
 
         dupedObj.append(dupName)
 
@@ -59,7 +53,7 @@ def main(dir = [-1,1,1]):
     cmds.select(t)
     cmds.xform(piv=[0,0,0])
     cmds.xform(s = dir)
-    cmds.makeIdentity(t, apply=True, t=1, r=1, s=1, n=0, pn=1)
+    cmds.makeIdentity(t, apply=True, t=1, r=1, s=1, n=1)
     cmds.select(dupedObj)
     cmds.parent(w=True)
     cmds.delete(t)
