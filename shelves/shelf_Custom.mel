@@ -1155,7 +1155,7 @@ global proc shelf_Custom () {
         -style "iconOnly" 
         -marginWidth 1
         -marginHeight 1
-        -command "import AAikman_AddAttrToSel as aaaats\nreload(aaaats)\naaaats.main()" 
+        -command "import AAikman_AddAttrToSel as aaAddAttrs\nreload(aaAddAttrs)\naaAddAttrs.main()" 
         -sourceType "python" 
         -commandRepeatable 1
         -flat 1
@@ -1216,7 +1216,7 @@ global proc shelf_Custom () {
         -style "iconOnly" 
         -marginWidth 1
         -marginHeight 1
-        -command "import AAikman_AimConstraintAll as aaaca\nreload(aaaca)\naaaca.main()" 
+        -command "import AAikman_AimConstraintAll as aaaca\nreload(aaaca)\naaaca.main(0)" 
         -sourceType "python" 
         -commandRepeatable 1
         -flat 1
@@ -1270,6 +1270,7 @@ global proc shelf_Custom () {
         -flipY 0
         -useAlpha 1
         -font "plainLabelFont" 
+        -imageOverlayLabel "SwpSel" 
         -overlayLabelColor 0.8 0.8 0.8 
         -overlayLabelBackColor 0 0 0 0.5 
         -image "pythonFamily.png" 
@@ -1278,6 +1279,37 @@ global proc shelf_Custom () {
         -marginWidth 1
         -marginHeight 1
         -command "import AAikman_SwapSelection as aaSwapSel\nreload(aaSwapSel)\naaSwapSel.main()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "import AAikman_MirrorObj as aaMirrorObj\nreload(aaMirrorObj)\naaMirrorObj.main()" 
+        -enableBackground 0
+        -align "center" 
+        -label "import AAikman_MirrorObj as aaMirrorObj\nreload(aaMirrorObj)\naaMi..." 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Mirr" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.5 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import AAikman_MirrorObj as aaMirrorObj\nreload(aaMirrorObj)\naaMirrorObj.main()" 
         -sourceType "python" 
         -commandRepeatable 1
         -flat 1

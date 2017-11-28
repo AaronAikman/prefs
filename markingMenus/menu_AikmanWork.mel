@@ -1096,6 +1096,57 @@
                 -longDivider 1
                 menuEditorMenuItem6;
 
+            menuItem
+                -label "Renamer" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "Quick_rename_tool" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "E" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -echoCommand 0
+                -italicized 0
+                -boldFont 0
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem4;
+
+            menuItem
+                -label "Search and Replace Names..." 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "performSearchReplaceNames 1" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "W" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "menuIconModify.png" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 0
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem5;
+
         setParent -m ..;
 
     setParent -m ..;
@@ -1478,56 +1529,6 @@
                 menuEditorMenuItem3;
 
         setParent -m ..;
-
-        menuItem
-            -label "Transform Components" 
-            -divider 0
-            -subMenu 0
-            -tearOff 0
-            -command "performPolyMove \"\" 0" 
-            -altModifier 0
-            -optionModifier 0
-            -commandModifier 0
-            -ctrlModifier 0
-            -shiftModifier 0
-            -optionBox 0
-            -enable 1
-            -data 0
-            -radialPosition "S" 
-            -allowOptionBoxes 1
-            -postMenuCommandOnce 0
-            -enableCommandRepeat 1
-            -image "polyMoveVertex.png" 
-            -echoCommand 0
-            -italicized 0
-            -boldFont 1
-            -sourceType "mel" 
-            -longDivider 1
-            menuEditorMenuItem7;
-
-        menuItem
-            -label "menuEditorMenuItem8" 
-            -divider 0
-            -subMenu 0
-            -tearOff 0
-            -command "MovePolygonComponentOptions" 
-            -altModifier 0
-            -optionModifier 0
-            -commandModifier 0
-            -ctrlModifier 0
-            -shiftModifier 0
-            -optionBox 1
-            -enable 1
-            -data 0
-            -allowOptionBoxes 1
-            -postMenuCommandOnce 0
-            -enableCommandRepeat 0
-            -echoCommand 0
-            -italicized 0
-            -boldFont 1
-            -sourceType "mel" 
-            -longDivider 1
-            menuEditorMenuItem8;
 
         menuItem
             -label "Deformers" 
@@ -2110,7 +2111,7 @@
         setParent -m ..;
 
         menuItem
-            -label "Instances Materials Renaming" 
+            -label "Inst/Mirroring" 
             -divider 0
             -subMenu 1
             -tearOff 0
@@ -2132,56 +2133,6 @@
             menuEditorMenuItem4;
 
             menuItem
-                -label "Assign New Lambert" 
-                -divider 0
-                -subMenu 0
-                -tearOff 0
-                -command "createAndAssignShader lambert \"\";" 
-                -altModifier 0
-                -optionModifier 0
-                -commandModifier 0
-                -ctrlModifier 0
-                -shiftModifier 0
-                -optionBox 0
-                -enable 1
-                -data 0
-                -radialPosition "SW" 
-                -allowOptionBoxes 1
-                -postMenuCommandOnce 0
-                -enableCommandRepeat 1
-                -echoCommand 0
-                -italicized 0
-                -boldFont 1
-                -sourceType "mel" 
-                -longDivider 1
-                menuEditorMenuItem1;
-
-            menuItem
-                -label "Assign Lambert 1" 
-                -divider 0
-                -subMenu 0
-                -tearOff 0
-                -command "hyperShade -assign lambert1;" 
-                -altModifier 0
-                -optionModifier 0
-                -commandModifier 0
-                -ctrlModifier 0
-                -shiftModifier 0
-                -optionBox 0
-                -enable 1
-                -data 0
-                -radialPosition "NW" 
-                -allowOptionBoxes 1
-                -postMenuCommandOnce 0
-                -enableCommandRepeat 1
-                -echoCommand 0
-                -italicized 0
-                -boldFont 1
-                -sourceType "mel" 
-                -longDivider 1
-                menuEditorMenuItem2;
-
-            menuItem
                 -label "Instance Z" 
                 -divider 0
                 -subMenu 0
@@ -2195,7 +2146,7 @@
                 -optionBox 0
                 -enable 1
                 -data 0
-                -radialPosition "S" 
+                -radialPosition "N" 
                 -allowOptionBoxes 1
                 -postMenuCommandOnce 0
                 -enableCommandRepeat 1
@@ -2220,7 +2171,7 @@
                 -optionBox 0
                 -enable 1
                 -data 0
-                -radialPosition "N" 
+                -radialPosition "SE" 
                 -allowOptionBoxes 1
                 -postMenuCommandOnce 0
                 -enableCommandRepeat 1
@@ -2270,7 +2221,7 @@
                 -optionBox 0
                 -enable 1
                 -data 0
-                -radialPosition "W" 
+                -radialPosition "NW" 
                 -allowOptionBoxes 1
                 -postMenuCommandOnce 0
                 -enableCommandRepeat 1
@@ -2282,11 +2233,11 @@
                 menuEditorMenuItem6;
 
             menuItem
-                -label "Search and Replace Names..." 
+                -label "Mirror Obj" 
                 -divider 0
                 -subMenu 0
                 -tearOff 0
-                -command "performSearchReplaceNames 1" 
+                -command "python(\"import AAikman_MirrorObj as aaMirrorObj; reload(aaMirrorObj); aaMirrorObj.main();\")\n" 
                 -altModifier 0
                 -optionModifier 0
                 -commandModifier 0
@@ -2295,42 +2246,16 @@
                 -optionBox 0
                 -enable 1
                 -data 0
-                -radialPosition "NE" 
-                -allowOptionBoxes 1
-                -postMenuCommandOnce 0
-                -enableCommandRepeat 1
-                -image "menuIconModify.png" 
-                -echoCommand 0
-                -italicized 0
-                -boldFont 1
-                -sourceType "mel" 
-                -longDivider 1
-                menuEditorMenuItem7;
-
-            menuItem
-                -label "Renamer" 
-                -divider 0
-                -subMenu 0
-                -tearOff 0
-                -command "Quick_rename_tool" 
-                -altModifier 0
-                -optionModifier 0
-                -commandModifier 0
-                -ctrlModifier 0
-                -shiftModifier 0
-                -optionBox 0
-                -enable 1
-                -data 0
-                -radialPosition "SE" 
+                -radialPosition "S" 
                 -allowOptionBoxes 1
                 -postMenuCommandOnce 0
                 -enableCommandRepeat 1
                 -echoCommand 0
                 -italicized 0
-                -boldFont 1
+                -boldFont 0
                 -sourceType "mel" 
                 -longDivider 1
-                menuEditorMenuItem8;
+                menuEditorMenuItem1;
 
         setParent -m ..;
 
@@ -2673,6 +2598,129 @@
                 -sourceType "mel" 
                 -longDivider 1
                 menuEditorMenuItem6;
+
+        setParent -m ..;
+
+        menuItem
+            -label "Misc" 
+            -divider 0
+            -subMenu 1
+            -tearOff 0
+            -altModifier 0
+            -optionModifier 0
+            -commandModifier 0
+            -ctrlModifier 0
+            -shiftModifier 0
+            -optionBox 0
+            -enable 1
+            -data 0
+            -radialPosition "S" 
+            -allowOptionBoxes 1
+            -enableCommandRepeat 1
+            -italicized 0
+            -boldFont 0
+            -sourceType "mel" 
+            -longDivider 1
+            menuEditorMenuItem8;
+
+            menuItem
+                -label "Transform Components" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "performPolyMove \"\" 0" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "S" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "polyMoveVertex.png" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 0
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem1;
+
+            menuItem
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "MovePolygonComponentOptions" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 1
+                -enable 1
+                -data 0
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 0
+                -echoCommand 0
+                -italicized 0
+                -boldFont 0
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem2;
+
+            menuItem
+                -label "Assign New Lambert" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "createAndAssignShader lambert \"\";" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "W" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -echoCommand 0
+                -italicized 0
+                -boldFont 0
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem3;
+
+            menuItem
+                -label "Assign Lambert 1" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "hyperShade -assign lambert1;" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "NW" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -echoCommand 0
+                -italicized 0
+                -boldFont 0
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem4;
 
         setParent -m ..;
 
@@ -4121,7 +4169,7 @@
             -enableCommandRepeat 1
             -echoCommand 0
             -italicized 0
-            -boldFont 0
+            -boldFont 1
             -sourceType "mel" 
             -longDivider 1
             menuEditorMenuItem1;
@@ -6021,11 +6069,11 @@
                 menuEditorMenuItem3;
 
             menuItem
-                -label "Aim Constrain All" 
+                -label "Aim Constrain Normal" 
                 -divider 0
                 -subMenu 0
                 -tearOff 0
-                -command "python(\"import AAikman_AimConstraintAll as aaaca; reload(aaaca); aaaca.main();\")" 
+                -command "python(\"import AAikman_AimConstraintAll as aaaca; reload(aaaca); aaaca.main(0, True);\")" 
                 -altModifier 0
                 -optionModifier 0
                 -commandModifier 0
@@ -6050,7 +6098,7 @@
                 -divider 0
                 -subMenu 0
                 -tearOff 0
-                -command "python(\"import AAikman_AddAttrToSel as aaaats; reload(aaaats); aaaats.main();\")" 
+                -command "python(\"import AAikman_AddAttrToSel as aaAddAttrs; reload(aaAddAttrs); aaAddAttrs.main();\")" 
                 -altModifier 0
                 -optionModifier 0
                 -commandModifier 0
@@ -6059,7 +6107,7 @@
                 -optionBox 0
                 -enable 1
                 -data 0
-                -radialPosition "SE" 
+                -radialPosition "W" 
                 -allowOptionBoxes 1
                 -postMenuCommandOnce 0
                 -enableCommandRepeat 1
@@ -6094,6 +6142,31 @@
                 -sourceType "mel" 
                 -longDivider 1
                 menuEditorMenuItem6;
+
+            menuItem
+                -label "Aim Constrain Last Obj Up" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "python(\"import AAikman_AimConstraintAll as aaaca; reload(aaaca); aaaca.main(1, True);\")" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "SE" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem1;
 
         setParent -m ..;
 
