@@ -1,3 +1,4 @@
+*.pyc
 mainWindowStates
 userPrefs.mel
 windowPrefs.mel
