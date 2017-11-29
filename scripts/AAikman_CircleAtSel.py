@@ -22,24 +22,29 @@ import maya.mel as mel
 
 ctrlSize = 30
 
-def main():
-    sel = cmds.ls(sl=True)
-    for i in sel:
-        cmds.select(i, r=True)
-        loc = cmds.xform(q=True, t=True, ws=True)
-        # loc = cmds.xform(q=True, piv=True)
-        
-        if i.endswith('_jnt'):
-            ctrlName = i[:-4]
-        else:
-            ctrlName = i
+def main(method = 0):
+	''' Method 1 = piv
+		Method 0 = trans
+	'''
+	sel = cmds.ls(sl=True)
+	for i in sel:
+		cmds.select(i, r=True)
+		if method:
+			loc = cmds.xform(q=True, piv=True)
+		else:
+			loc = cmds.xform(q=True, t=True, ws=True)
+		
+		if i.endswith('_jnt'):
+			ctrlName = i[:-4]
+		else:
+			ctrlName = i
 
-        curCtrlName = '{}_ctrl'.format(ctrlName)
+		curCtrlName = '{}_ctrl'.format(ctrlName)
 
-        cmds.circle(n=curCtrlName)
-        cmds.move(loc[0], loc[1], loc[2])
-        cmds.scale(ctrlSize, ctrlSize, ctrlSize)
-        mel.eval("performFreezeTransformations(0)")
-        cmds.delete(ch=True)
-        cmds.parentConstraint(curCtrlName, i, mo=True)
-        
+		cmds.circle(n=curCtrlName)
+		cmds.move(loc[0], loc[1], loc[2])
+		cmds.scale(ctrlSize, ctrlSize, ctrlSize)
+		mel.eval("performFreezeTransformations(0)")
+		cmds.delete(ch=True)
+		cmds.parentConstraint(curCtrlName, i, mo=True)
+		

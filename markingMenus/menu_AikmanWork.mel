@@ -516,6 +516,31 @@
                 -longDivider 1
                 menuEditorMenuItem5;
 
+            menuItem
+                -label "Single Hierarchy" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "python( \"import AAikman_ParentSelSingleChain as aaSingleHeir; reload(aaSingleHeir); aaSingleHeir.main();\" ) " 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "W" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -echoCommand 0
+                -italicized 0
+                -boldFont 0
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem6;
+
         setParent -m ..;
 
         menuItem
@@ -4275,7 +4300,7 @@
         menuEditorMenuItem8;
 
         menuItem
-            -label "Creation" 
+            -label "Creation/Conversion" 
             -divider 0
             -subMenu 1
             -tearOff 0
@@ -5312,106 +5337,6 @@
                 menuEditorMenuItem12;
 
             menuItem
-                -label "Aim Constraint" 
-                -divider 0
-                -subMenu 0
-                -tearOff 0
-                -command "AimConstraint" 
-                -altModifier 0
-                -optionModifier 0
-                -commandModifier 0
-                -ctrlModifier 0
-                -shiftModifier 0
-                -optionBox 0
-                -enable 1
-                -data 0
-                -radialPosition "N" 
-                -allowOptionBoxes 1
-                -postMenuCommandOnce 0
-                -enableCommandRepeat 1
-                -image "aimConstraint.png" 
-                -echoCommand 0
-                -italicized 0
-                -boldFont 1
-                -sourceType "mel" 
-                -longDivider 1
-                menuEditorMenuItem13;
-
-            menuItem
-                -label "menuEditorMenuItem14" 
-                -divider 0
-                -subMenu 0
-                -tearOff 0
-                -command "AimConstraintOptions" 
-                -altModifier 0
-                -optionModifier 0
-                -commandModifier 0
-                -ctrlModifier 0
-                -shiftModifier 0
-                -optionBox 1
-                -enable 1
-                -data 0
-                -allowOptionBoxes 1
-                -postMenuCommandOnce 0
-                -enableCommandRepeat 0
-                -echoCommand 0
-                -italicized 0
-                -boldFont 1
-                -sourceType "mel" 
-                -longDivider 1
-                menuEditorMenuItem14;
-
-            menuItem
-                -label "Pole Vector Constraint" 
-                -divider 0
-                -subMenu 0
-                -tearOff 0
-                -command "PoleVectorConstraint" 
-                -altModifier 0
-                -optionModifier 0
-                -commandModifier 0
-                -ctrlModifier 0
-                -shiftModifier 0
-                -optionBox 0
-                -enable 1
-                -data 0
-                -radialPosition "S" 
-                -allowOptionBoxes 1
-                -postMenuCommandOnce 0
-                -enableCommandRepeat 1
-                -image "poleVectorConstraint.png" 
-                -echoCommand 0
-                -italicized 0
-                -boldFont 1
-                -sourceType "mel" 
-                -longDivider 1
-                menuEditorMenuItem15;
-
-            menuItem
-                -label "menuEditorMenuItem16" 
-                -divider 0
-                -subMenu 0
-                -tearOff 0
-                -command "PoleVectorConstraintOptions" 
-                -altModifier 0
-                -optionModifier 0
-                -commandModifier 0
-                -ctrlModifier 0
-                -shiftModifier 0
-                -optionBox 1
-                -enable 1
-                -data 0
-                -allowOptionBoxes 1
-                -postMenuCommandOnce 0
-                -enableCommandRepeat 0
-                -echoCommand 0
-                -italicized 0
-                -boldFont 1
-                -sourceType "mel" 
-                -longDivider 1
-                menuEditorMenuItem16;
-
-            menuItem
                 -label "Orient Constraint MO" 
                 -divider 0
                 -subMenu 0
@@ -5535,6 +5460,301 @@
                 -sourceType "mel" 
                 -longDivider 1
                 menuEditorMenuItem2;
+
+            menuItem
+                -label "Aim" 
+                -divider 0
+                -subMenu 1
+                -tearOff 0
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "N" 
+                -allowOptionBoxes 1
+                -enableCommandRepeat 1
+                -italicized 0
+                -boldFont 0
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem6;
+
+                menuItem
+                    -label "Aim Constraint" 
+                    -divider 0
+                    -subMenu 0
+                    -tearOff 0
+                    -command "AimConstraint" 
+                    -altModifier 0
+                    -optionModifier 0
+                    -commandModifier 0
+                    -ctrlModifier 0
+                    -shiftModifier 0
+                    -optionBox 0
+                    -enable 1
+                    -data 0
+                    -radialPosition "N" 
+                    -allowOptionBoxes 1
+                    -postMenuCommandOnce 0
+                    -enableCommandRepeat 1
+                    -image "aimConstraint.png" 
+                    -echoCommand 0
+                    -italicized 0
+                    -boldFont 0
+                    -sourceType "mel" 
+                    -longDivider 1
+                    menuEditorMenuItem1;
+
+                menuItem
+                    -divider 0
+                    -subMenu 0
+                    -tearOff 0
+                    -command "AimConstraintOptions" 
+                    -altModifier 0
+                    -optionModifier 0
+                    -commandModifier 0
+                    -ctrlModifier 0
+                    -shiftModifier 0
+                    -optionBox 1
+                    -enable 1
+                    -data 0
+                    -allowOptionBoxes 1
+                    -postMenuCommandOnce 0
+                    -enableCommandRepeat 0
+                    -echoCommand 0
+                    -italicized 0
+                    -boldFont 0
+                    -sourceType "mel" 
+                    -longDivider 1
+                    menuEditorMenuItem2;
+
+                menuItem
+                    -label "Aim Constrain Normal" 
+                    -divider 0
+                    -subMenu 0
+                    -tearOff 0
+                    -command "python(\"import AAikman_AimConstraintAll as aaaca; reload(aaaca); aaaca.main(0, True);\")" 
+                    -altModifier 0
+                    -optionModifier 0
+                    -commandModifier 0
+                    -ctrlModifier 0
+                    -shiftModifier 0
+                    -optionBox 0
+                    -enable 1
+                    -data 0
+                    -radialPosition "NW" 
+                    -allowOptionBoxes 1
+                    -postMenuCommandOnce 0
+                    -enableCommandRepeat 1
+                    -echoCommand 0
+                    -italicized 0
+                    -boldFont 0
+                    -sourceType "mel" 
+                    -longDivider 1
+                    menuEditorMenuItem3;
+
+                menuItem
+                    -label "Aim Constrain Last Obj Up" 
+                    -divider 0
+                    -subMenu 0
+                    -tearOff 0
+                    -command "python(\"import AAikman_AimConstraintAll as aaaca; reload(aaaca); aaaca.main(1, True);\")" 
+                    -altModifier 0
+                    -optionModifier 0
+                    -commandModifier 0
+                    -ctrlModifier 0
+                    -shiftModifier 0
+                    -optionBox 0
+                    -enable 1
+                    -data 0
+                    -radialPosition "NE" 
+                    -allowOptionBoxes 1
+                    -postMenuCommandOnce 0
+                    -enableCommandRepeat 1
+                    -echoCommand 0
+                    -italicized 0
+                    -boldFont 0
+                    -sourceType "mel" 
+                    -longDivider 1
+                    menuEditorMenuItem4;
+
+            setParent -m ..;
+
+            menuItem
+                -label "Pole Vector Constraint" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "PoleVectorConstraint" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "poleVectorConstraint.png" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem15;
+
+            menuItem
+                -label "menuEditorMenuItem16" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "PoleVectorConstraintOptions" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 1
+                -enable 1
+                -data 0
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 0
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem10;
+
+            menuItem
+                -label "More" 
+                -divider 0
+                -subMenu 1
+                -tearOff 0
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "S" 
+                -allowOptionBoxes 1
+                -enableCommandRepeat 1
+                -italicized 0
+                -boldFont 0
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem13;
+
+                menuItem
+                    -label "Pole Vector Constraint" 
+                    -divider 0
+                    -subMenu 0
+                    -tearOff 0
+                    -command "PoleVectorConstraint" 
+                    -altModifier 0
+                    -optionModifier 0
+                    -commandModifier 0
+                    -ctrlModifier 0
+                    -shiftModifier 0
+                    -optionBox 0
+                    -enable 1
+                    -data 0
+                    -radialPosition "S" 
+                    -allowOptionBoxes 1
+                    -postMenuCommandOnce 0
+                    -enableCommandRepeat 1
+                    -image "poleVectorConstraint.png" 
+                    -echoCommand 0
+                    -italicized 0
+                    -boldFont 0
+                    -sourceType "mel" 
+                    -longDivider 1
+                    menuEditorMenuItem1;
+
+                menuItem
+                    -divider 0
+                    -subMenu 0
+                    -tearOff 0
+                    -command "PoleVectorConstraintOptions" 
+                    -altModifier 0
+                    -optionModifier 0
+                    -commandModifier 0
+                    -ctrlModifier 0
+                    -shiftModifier 0
+                    -optionBox 1
+                    -enable 1
+                    -data 0
+                    -allowOptionBoxes 1
+                    -postMenuCommandOnce 0
+                    -enableCommandRepeat 0
+                    -echoCommand 0
+                    -italicized 0
+                    -boldFont 0
+                    -sourceType "mel" 
+                    -longDivider 1
+                    menuEditorMenuItem2;
+
+                menuItem
+                    -label "Scale MO" 
+                    -divider 0
+                    -subMenu 0
+                    -tearOff 0
+                    -command "scaleConstraint -mo" 
+                    -altModifier 0
+                    -optionModifier 0
+                    -commandModifier 0
+                    -ctrlModifier 0
+                    -shiftModifier 0
+                    -optionBox 0
+                    -enable 1
+                    -data 0
+                    -radialPosition "SE" 
+                    -allowOptionBoxes 1
+                    -postMenuCommandOnce 0
+                    -enableCommandRepeat 1
+                    -echoCommand 0
+                    -italicized 0
+                    -boldFont 0
+                    -sourceType "mel" 
+                    -longDivider 1
+                    menuEditorMenuItem3;
+
+                menuItem
+                    -label "Scale" 
+                    -divider 0
+                    -subMenu 0
+                    -tearOff 0
+                    -command "scaleConstraint -mo" 
+                    -altModifier 0
+                    -optionModifier 0
+                    -commandModifier 0
+                    -ctrlModifier 0
+                    -shiftModifier 0
+                    -optionBox 0
+                    -enable 1
+                    -data 0
+                    -radialPosition "SW" 
+                    -allowOptionBoxes 1
+                    -postMenuCommandOnce 0
+                    -enableCommandRepeat 1
+                    -echoCommand 0
+                    -italicized 0
+                    -boldFont 0
+                    -sourceType "mel" 
+                    -longDivider 1
+                    menuEditorMenuItem4;
+
+            setParent -m ..;
 
         setParent -m ..;
 
@@ -5867,58 +6087,6 @@
                 menuEditorMenuItem4;
 
             menuItem
-                -label "Attach" 
-                -divider 0
-                -subMenu 0
-                -tearOff 0
-                -command "doAttachCurveArgList 2 { \"1\", \"0\", \"1\", \"1\", \"0.5\", \"0\", \"0.1\" }" 
-                -altModifier 0
-                -optionModifier 0
-                -commandModifier 0
-                -ctrlModifier 0
-                -shiftModifier 0
-                -optionBox 0
-                -enable 1
-                -data 0
-                -radialPosition "E" 
-                -allowOptionBoxes 1
-                -postMenuCommandOnce 0
-                -enableCommandRepeat 1
-                -image "attachCurves.png" 
-                -echoCommand 0
-                -italicized 0
-                -boldFont 1
-                -sourceType "mel" 
-                -longDivider 1
-                menuEditorMenuItem14;
-
-            menuItem
-                -label "Detach" 
-                -divider 0
-                -subMenu 0
-                -tearOff 0
-                -command "performDetachPreset 1 1" 
-                -altModifier 0
-                -optionModifier 0
-                -commandModifier 0
-                -ctrlModifier 0
-                -shiftModifier 0
-                -optionBox 0
-                -enable 1
-                -data 0
-                -radialPosition "SE" 
-                -allowOptionBoxes 1
-                -postMenuCommandOnce 0
-                -enableCommandRepeat 1
-                -image "detachCurve.png" 
-                -echoCommand 0
-                -italicized 0
-                -boldFont 1
-                -sourceType "mel" 
-                -longDivider 1
-                menuEditorMenuItem15;
-
-            menuItem
                 -label "Text" 
                 -divider 0
                 -subMenu 0
@@ -5943,32 +6111,6 @@
                 -sourceType "mel" 
                 -longDivider 1
                 menuEditorMenuItem18;
-
-            menuItem
-                -label "Rebuild Curve Option Box" 
-                -divider 0
-                -subMenu 0
-                -tearOff 0
-                -command "RebuildCurveOptions" 
-                -altModifier 0
-                -optionModifier 0
-                -commandModifier 0
-                -ctrlModifier 0
-                -shiftModifier 0
-                -optionBox 0
-                -enable 1
-                -data 0
-                -radialPosition "NE" 
-                -allowOptionBoxes 1
-                -postMenuCommandOnce 0
-                -enableCommandRepeat 1
-                -image "rebuildCurve.png" 
-                -echoCommand 0
-                -italicized 0
-                -boldFont 1
-                -sourceType "mel" 
-                -longDivider 1
-                menuEditorMenuItem19;
 
             menuItem
                 -label "Wiz" 
@@ -5996,31 +6138,6 @@
                 menuEditorMenuItem20;
 
             menuItem
-                -label "Reparent Shape" 
-                -divider 0
-                -subMenu 0
-                -tearOff 0
-                -command "parent -r -shape" 
-                -altModifier 0
-                -optionModifier 0
-                -commandModifier 0
-                -ctrlModifier 0
-                -shiftModifier 0
-                -optionBox 0
-                -enable 1
-                -data 0
-                -radialPosition "N" 
-                -allowOptionBoxes 1
-                -postMenuCommandOnce 0
-                -enableCommandRepeat 1
-                -echoCommand 0
-                -italicized 0
-                -boldFont 1
-                -sourceType "mel" 
-                -longDivider 1
-                menuEditorMenuItem1;
-
-            menuItem
                 -label "Control Colors" 
                 -divider 0
                 -subMenu 1
@@ -6033,11 +6150,11 @@
                 -optionBox 0
                 -enable 1
                 -data 0
-                -radialPosition "SW" 
+                -radialPosition "N" 
                 -allowOptionBoxes 1
                 -enableCommandRepeat 1
                 -italicized 0
-                -boldFont 0
+                -boldFont 1
                 -sourceType "mel" 
                 -longDivider 1
                 menuEditorMenuItem6;
@@ -6062,7 +6179,7 @@
                     -enableCommandRepeat 1
                     -echoCommand 0
                     -italicized 0
-                    -boldFont 0
+                    -boldFont 1
                     -sourceType "mel" 
                     -longDivider 1
                     menuEditorMenuItem1;
@@ -6087,7 +6204,7 @@
                     -enableCommandRepeat 1
                     -echoCommand 0
                     -italicized 0
-                    -boldFont 0
+                    -boldFont 1
                     -sourceType "mel" 
                     -longDivider 1
                     menuEditorMenuItem2;
@@ -6112,7 +6229,7 @@
                     -enableCommandRepeat 1
                     -echoCommand 0
                     -italicized 0
-                    -boldFont 0
+                    -boldFont 1
                     -sourceType "mel" 
                     -longDivider 1
                     menuEditorMenuItem3;
@@ -6137,7 +6254,7 @@
                     -enableCommandRepeat 1
                     -echoCommand 0
                     -italicized 0
-                    -boldFont 0
+                    -boldFont 1
                     -sourceType "mel" 
                     -longDivider 1
                     menuEditorMenuItem4;
@@ -6162,7 +6279,7 @@
                     -enableCommandRepeat 1
                     -echoCommand 0
                     -italicized 0
-                    -boldFont 0
+                    -boldFont 1
                     -sourceType "mel" 
                     -longDivider 1
                     menuEditorMenuItem5;
@@ -6187,7 +6304,7 @@
                     -enableCommandRepeat 1
                     -echoCommand 0
                     -italicized 0
-                    -boldFont 0
+                    -boldFont 1
                     -sourceType "mel" 
                     -longDivider 1
                     menuEditorMenuItem6;
@@ -6212,7 +6329,7 @@
                     -enableCommandRepeat 1
                     -echoCommand 0
                     -italicized 0
-                    -boldFont 0
+                    -boldFont 1
                     -sourceType "mel" 
                     -longDivider 1
                     menuEditorMenuItem7;
@@ -6237,17 +6354,218 @@
                     -enableCommandRepeat 1
                     -echoCommand 0
                     -italicized 0
-                    -boldFont 0
+                    -boldFont 1
                     -sourceType "mel" 
                     -longDivider 1
                     menuEditorMenuItem8;
 
             setParent -m ..;
 
+            menuItem
+                -label "CurveOptions" 
+                -divider 0
+                -subMenu 1
+                -tearOff 0
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "NE" 
+                -allowOptionBoxes 1
+                -enableCommandRepeat 1
+                -italicized 0
+                -boldFont 0
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem2;
+
+                menuItem
+                    -label "Attach" 
+                    -divider 0
+                    -subMenu 0
+                    -tearOff 0
+                    -command "doAttachCurveArgList 2 { \"1\", \"0\", \"1\", \"1\", \"0.5\", \"0\", \"0.1\" }" 
+                    -altModifier 0
+                    -optionModifier 0
+                    -commandModifier 0
+                    -ctrlModifier 0
+                    -shiftModifier 0
+                    -optionBox 0
+                    -enable 1
+                    -data 0
+                    -radialPosition "E" 
+                    -allowOptionBoxes 1
+                    -postMenuCommandOnce 0
+                    -enableCommandRepeat 1
+                    -image "attachCurves.png" 
+                    -echoCommand 0
+                    -italicized 0
+                    -boldFont 0
+                    -sourceType "mel" 
+                    -longDivider 1
+                    menuEditorMenuItem1;
+
+                menuItem
+                    -label "Detach" 
+                    -divider 0
+                    -subMenu 0
+                    -tearOff 0
+                    -command "performDetachPreset 1 1" 
+                    -altModifier 0
+                    -optionModifier 0
+                    -commandModifier 0
+                    -ctrlModifier 0
+                    -shiftModifier 0
+                    -optionBox 0
+                    -enable 1
+                    -data 0
+                    -radialPosition "SE" 
+                    -allowOptionBoxes 1
+                    -postMenuCommandOnce 0
+                    -enableCommandRepeat 1
+                    -image "detachCurve.png" 
+                    -echoCommand 0
+                    -italicized 0
+                    -boldFont 0
+                    -sourceType "mel" 
+                    -longDivider 1
+                    menuEditorMenuItem2;
+
+                menuItem
+                    -label "Rebuild Curve Option Box" 
+                    -divider 0
+                    -subMenu 0
+                    -tearOff 0
+                    -command "RebuildCurveOptions" 
+                    -altModifier 0
+                    -optionModifier 0
+                    -commandModifier 0
+                    -ctrlModifier 0
+                    -shiftModifier 0
+                    -optionBox 0
+                    -enable 1
+                    -data 0
+                    -radialPosition "NE" 
+                    -allowOptionBoxes 1
+                    -postMenuCommandOnce 0
+                    -enableCommandRepeat 1
+                    -image "rebuildCurve.png" 
+                    -echoCommand 0
+                    -italicized 0
+                    -boldFont 0
+                    -sourceType "mel" 
+                    -longDivider 1
+                    menuEditorMenuItem3;
+
+                menuItem
+                    -label "Reparent Shape" 
+                    -divider 0
+                    -subMenu 0
+                    -tearOff 0
+                    -command "parent -r -shape" 
+                    -altModifier 0
+                    -optionModifier 0
+                    -commandModifier 0
+                    -ctrlModifier 0
+                    -shiftModifier 0
+                    -optionBox 0
+                    -enable 1
+                    -data 0
+                    -radialPosition "N" 
+                    -allowOptionBoxes 1
+                    -postMenuCommandOnce 0
+                    -enableCommandRepeat 1
+                    -echoCommand 0
+                    -italicized 0
+                    -boldFont 0
+                    -sourceType "mel" 
+                    -longDivider 1
+                    menuEditorMenuItem4;
+
+                menuItem
+                    -label "Fix Curve Parenting" 
+                    -divider 0
+                    -subMenu 0
+                    -tearOff 0
+                    -command "python(\"import AAikman_FixCurveParenting as aafcp; reload(aafcp); aafcp.main();\")" 
+                    -altModifier 0
+                    -optionModifier 0
+                    -commandModifier 0
+                    -ctrlModifier 0
+                    -shiftModifier 0
+                    -optionBox 0
+                    -enable 1
+                    -data 0
+                    -radialPosition "NW" 
+                    -allowOptionBoxes 1
+                    -postMenuCommandOnce 0
+                    -enableCommandRepeat 1
+                    -echoCommand 0
+                    -italicized 0
+                    -boldFont 0
+                    -sourceType "mel" 
+                    -longDivider 1
+                    menuEditorMenuItem5;
+
+            setParent -m ..;
+
+            menuItem
+                -label "Square" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "nurbsSquarePreset(0,0,0,0,0,0,1,1,1,1,3,1)" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "SW" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "square.png" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 0
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem5;
+
+            menuItem
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "CreateNURBSSquareOptions" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 1
+                -enable 1
+                -data 0
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 0
+                -echoCommand 0
+                -italicized 0
+                -boldFont 0
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem7;
+
         setParent -m ..;
 
         menuItem
-            -label "Custom" 
+            -label "Batch Creation" 
             -divider 0
             -subMenu 1
             -tearOff 0
@@ -6319,86 +6637,11 @@
                 menuEditorMenuItem3;
 
             menuItem
-                -label "Aim Constrain Normal" 
-                -divider 0
-                -subMenu 0
-                -tearOff 0
-                -command "python(\"import AAikman_AimConstraintAll as aaaca; reload(aaaca); aaaca.main(0, True);\")" 
-                -altModifier 0
-                -optionModifier 0
-                -commandModifier 0
-                -ctrlModifier 0
-                -shiftModifier 0
-                -optionBox 0
-                -enable 1
-                -data 0
-                -radialPosition "E" 
-                -allowOptionBoxes 1
-                -postMenuCommandOnce 0
-                -enableCommandRepeat 1
-                -echoCommand 0
-                -italicized 0
-                -boldFont 1
-                -sourceType "mel" 
-                -longDivider 1
-                menuEditorMenuItem4;
-
-            menuItem
                 -label "Add Attributes" 
                 -divider 0
                 -subMenu 0
                 -tearOff 0
                 -command "python(\"import AAikman_AddAttrToSel as aaAddAttrs; reload(aaAddAttrs); aaAddAttrs.main();\")" 
-                -altModifier 0
-                -optionModifier 0
-                -commandModifier 0
-                -ctrlModifier 0
-                -shiftModifier 0
-                -optionBox 0
-                -enable 1
-                -data 0
-                -radialPosition "W" 
-                -allowOptionBoxes 1
-                -postMenuCommandOnce 0
-                -enableCommandRepeat 1
-                -echoCommand 0
-                -italicized 0
-                -boldFont 1
-                -sourceType "mel" 
-                -longDivider 1
-                menuEditorMenuItem5;
-
-            menuItem
-                -label "Fix Curve Parenting" 
-                -divider 0
-                -subMenu 0
-                -tearOff 0
-                -command "python(\"import AAikman_FixCurveParenting as aafcp; reload(aafcp); aafcp.main();\")" 
-                -altModifier 0
-                -optionModifier 0
-                -commandModifier 0
-                -ctrlModifier 0
-                -shiftModifier 0
-                -optionBox 0
-                -enable 1
-                -data 0
-                -radialPosition "S" 
-                -allowOptionBoxes 1
-                -postMenuCommandOnce 0
-                -enableCommandRepeat 1
-                -echoCommand 0
-                -italicized 0
-                -boldFont 1
-                -sourceType "mel" 
-                -longDivider 1
-                menuEditorMenuItem6;
-
-            menuItem
-                -label "Aim Constrain Last Obj Up" 
-                -divider 0
-                -subMenu 0
-                -tearOff 0
-                -command "python(\"import AAikman_AimConstraintAll as aaaca; reload(aaaca); aaaca.main(1, True);\")" 
                 -altModifier 0
                 -optionModifier 0
                 -commandModifier 0
@@ -6416,7 +6659,57 @@
                 -boldFont 1
                 -sourceType "mel" 
                 -longDivider 1
-                menuEditorMenuItem1;
+                menuEditorMenuItem5;
+
+            menuItem
+                -label "Circle Sel Piv" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "python( \"import AAikman_CircleAtSel as aacas; reload(aacas); aacas.main(1);\" ) " 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "NW" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem7;
+
+            menuItem
+                -label "Dup Scale Reparent" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "python( \"import AAikman_DuplicateScaleAndParentSel as aaDupScaleReparent; reload(aaDupScaleReparent); aaDupScaleReparent.main();\" ) " 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "SW" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -echoCommand 0
+                -italicized 0
+                -boldFont 0
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem8;
 
         setParent -m ..;
 

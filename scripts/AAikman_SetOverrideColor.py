@@ -33,15 +33,15 @@ def main(clr = 'blue'):
     sel = cmds.ls(sl=True)
     clr = clr.lower()
     for i in sel:
-        shapeName = '{}Shape'.format(i)
-        if cmds.objExists(shapeName):
-            changeCurveColor(shapeName, clr)
-        else:
-            children = cmds.listRelatives(c=True, pa=True)
-            for child in children:
-                if cmds.objectType(child) == 'nurbsCurve':
-                    print child
-                    changeCurveColor(child, clr)
+        # shapeName = '{}Shape'.format(i)
+        # if cmds.objExists(shapeName):
+        #     changeCurveColor(shapeName, clr)
+        # else:
+        children = cmds.listRelatives(c=True, pa=True)
+        for child in children:
+            if cmds.objectType(child) == 'nurbsCurve':
+                print child
+                changeCurveColor(child, clr)
 
 
 def changeCurveColor(obj, clr):
