@@ -27,6 +27,7 @@ def main():
     for i in sel:
         cmds.select(i, r=True)
         loc = cmds.xform(q=True, t=True, ws=True)
+        # loc = cmds.xform(q=True, piv=True)
         
         if i.endswith('_jnt'):
             ctrlName = i[:-4]

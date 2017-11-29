@@ -5539,7 +5539,7 @@
         setParent -m ..;
 
         menuItem
-            -label "Rigging Misc" 
+            -label "Misc" 
             -divider 0
             -subMenu 1
             -tearOff 0
@@ -5867,56 +5867,6 @@
                 menuEditorMenuItem4;
 
             menuItem
-                -label "Square" 
-                -divider 0
-                -subMenu 0
-                -tearOff 0
-                -command "nurbsSquarePreset(0,0,0,0,0,0,1,1,1,1,3,1)" 
-                -altModifier 0
-                -optionModifier 0
-                -commandModifier 0
-                -ctrlModifier 0
-                -shiftModifier 0
-                -optionBox 0
-                -enable 1
-                -data 0
-                -radialPosition "SW" 
-                -allowOptionBoxes 1
-                -postMenuCommandOnce 0
-                -enableCommandRepeat 1
-                -image "square.png" 
-                -echoCommand 0
-                -italicized 0
-                -boldFont 1
-                -sourceType "mel" 
-                -longDivider 1
-                menuEditorMenuItem5;
-
-            menuItem
-                -label "menuEditorMenuItem6" 
-                -divider 0
-                -subMenu 0
-                -tearOff 0
-                -command "CreateNURBSSquareOptions" 
-                -altModifier 0
-                -optionModifier 0
-                -commandModifier 0
-                -ctrlModifier 0
-                -shiftModifier 0
-                -optionBox 1
-                -enable 1
-                -data 0
-                -allowOptionBoxes 1
-                -postMenuCommandOnce 0
-                -enableCommandRepeat 0
-                -echoCommand 0
-                -italicized 0
-                -boldFont 1
-                -sourceType "mel" 
-                -longDivider 1
-                menuEditorMenuItem6;
-
-            menuItem
                 -label "Attach" 
                 -divider 0
                 -subMenu 0
@@ -6069,6 +6019,230 @@
                 -sourceType "mel" 
                 -longDivider 1
                 menuEditorMenuItem1;
+
+            menuItem
+                -label "Control Colors" 
+                -divider 0
+                -subMenu 1
+                -tearOff 0
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "SW" 
+                -allowOptionBoxes 1
+                -enableCommandRepeat 1
+                -italicized 0
+                -boldFont 0
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem6;
+
+                menuItem
+                    -label "Blue" 
+                    -divider 0
+                    -subMenu 0
+                    -tearOff 0
+                    -command "python( \"import AAikman_SetOverrideColor as aaSetColor; reload(aaSetColor); aaSetColor.main();\" ) " 
+                    -altModifier 0
+                    -optionModifier 0
+                    -commandModifier 0
+                    -ctrlModifier 0
+                    -shiftModifier 0
+                    -optionBox 0
+                    -enable 1
+                    -data 0
+                    -radialPosition "N" 
+                    -allowOptionBoxes 1
+                    -postMenuCommandOnce 0
+                    -enableCommandRepeat 1
+                    -echoCommand 0
+                    -italicized 0
+                    -boldFont 0
+                    -sourceType "mel" 
+                    -longDivider 1
+                    menuEditorMenuItem1;
+
+                menuItem
+                    -label "Red" 
+                    -divider 0
+                    -subMenu 0
+                    -tearOff 0
+                    -command "python( \"import AAikman_SetOverrideColor as aaSetColor; reload(aaSetColor); aaSetColor.main('red');\" ) " 
+                    -altModifier 0
+                    -optionModifier 0
+                    -commandModifier 0
+                    -ctrlModifier 0
+                    -shiftModifier 0
+                    -optionBox 0
+                    -enable 1
+                    -data 0
+                    -radialPosition "NE" 
+                    -allowOptionBoxes 1
+                    -postMenuCommandOnce 0
+                    -enableCommandRepeat 1
+                    -echoCommand 0
+                    -italicized 0
+                    -boldFont 0
+                    -sourceType "mel" 
+                    -longDivider 1
+                    menuEditorMenuItem2;
+
+                menuItem
+                    -label "Yellow" 
+                    -divider 0
+                    -subMenu 0
+                    -tearOff 0
+                    -command "python( \"import AAikman_SetOverrideColor as aaSetColor; reload(aaSetColor); aaSetColor.main('yellow');\" ) " 
+                    -altModifier 0
+                    -optionModifier 0
+                    -commandModifier 0
+                    -ctrlModifier 0
+                    -shiftModifier 0
+                    -optionBox 0
+                    -enable 1
+                    -data 0
+                    -radialPosition "E" 
+                    -allowOptionBoxes 1
+                    -postMenuCommandOnce 0
+                    -enableCommandRepeat 1
+                    -echoCommand 0
+                    -italicized 0
+                    -boldFont 0
+                    -sourceType "mel" 
+                    -longDivider 1
+                    menuEditorMenuItem3;
+
+                menuItem
+                    -label "Cyan" 
+                    -divider 0
+                    -subMenu 0
+                    -tearOff 0
+                    -command "python( \"import AAikman_SetOverrideColor as aaSetColor; reload(aaSetColor); aaSetColor.main('cyan');\" ) " 
+                    -altModifier 0
+                    -optionModifier 0
+                    -commandModifier 0
+                    -ctrlModifier 0
+                    -shiftModifier 0
+                    -optionBox 0
+                    -enable 1
+                    -data 0
+                    -radialPosition "SE" 
+                    -allowOptionBoxes 1
+                    -postMenuCommandOnce 0
+                    -enableCommandRepeat 1
+                    -echoCommand 0
+                    -italicized 0
+                    -boldFont 0
+                    -sourceType "mel" 
+                    -longDivider 1
+                    menuEditorMenuItem4;
+
+                menuItem
+                    -label "Random" 
+                    -divider 0
+                    -subMenu 0
+                    -tearOff 0
+                    -command "python( \"import AAikman_SetOverrideColor as aaSetColor; reload(aaSetColor); aaSetColor.main('random');\" ) " 
+                    -altModifier 0
+                    -optionModifier 0
+                    -commandModifier 0
+                    -ctrlModifier 0
+                    -shiftModifier 0
+                    -optionBox 0
+                    -enable 1
+                    -data 0
+                    -radialPosition "S" 
+                    -allowOptionBoxes 1
+                    -postMenuCommandOnce 0
+                    -enableCommandRepeat 1
+                    -echoCommand 0
+                    -italicized 0
+                    -boldFont 0
+                    -sourceType "mel" 
+                    -longDivider 1
+                    menuEditorMenuItem5;
+
+                menuItem
+                    -label "Pink" 
+                    -divider 0
+                    -subMenu 0
+                    -tearOff 0
+                    -command "python( \"import AAikman_SetOverrideColor as aaSetColor; reload(aaSetColor); aaSetColor.main('pink');\" ) " 
+                    -altModifier 0
+                    -optionModifier 0
+                    -commandModifier 0
+                    -ctrlModifier 0
+                    -shiftModifier 0
+                    -optionBox 0
+                    -enable 1
+                    -data 0
+                    -radialPosition "SW" 
+                    -allowOptionBoxes 1
+                    -postMenuCommandOnce 0
+                    -enableCommandRepeat 1
+                    -echoCommand 0
+                    -italicized 0
+                    -boldFont 0
+                    -sourceType "mel" 
+                    -longDivider 1
+                    menuEditorMenuItem6;
+
+                menuItem
+                    -label "Black" 
+                    -divider 0
+                    -subMenu 0
+                    -tearOff 0
+                    -command "python( \"import AAikman_SetOverrideColor as aaSetColor; reload(aaSetColor); aaSetColor.main('black');\" ) " 
+                    -altModifier 0
+                    -optionModifier 0
+                    -commandModifier 0
+                    -ctrlModifier 0
+                    -shiftModifier 0
+                    -optionBox 0
+                    -enable 1
+                    -data 0
+                    -radialPosition "W" 
+                    -allowOptionBoxes 1
+                    -postMenuCommandOnce 0
+                    -enableCommandRepeat 1
+                    -echoCommand 0
+                    -italicized 0
+                    -boldFont 0
+                    -sourceType "mel" 
+                    -longDivider 1
+                    menuEditorMenuItem7;
+
+                menuItem
+                    -label "White" 
+                    -divider 0
+                    -subMenu 0
+                    -tearOff 0
+                    -command "python( \"import AAikman_SetOverrideColor as aaSetColor; reload(aaSetColor); aaSetColor.main('white');\" ) " 
+                    -altModifier 0
+                    -optionModifier 0
+                    -commandModifier 0
+                    -ctrlModifier 0
+                    -shiftModifier 0
+                    -optionBox 0
+                    -enable 1
+                    -data 0
+                    -radialPosition "NW" 
+                    -allowOptionBoxes 1
+                    -postMenuCommandOnce 0
+                    -enableCommandRepeat 1
+                    -echoCommand 0
+                    -italicized 0
+                    -boldFont 0
+                    -sourceType "mel" 
+                    -longDivider 1
+                    menuEditorMenuItem8;
+
+            setParent -m ..;
 
         setParent -m ..;
 
