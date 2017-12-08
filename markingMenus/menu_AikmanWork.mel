@@ -536,7 +536,7 @@
                 -enableCommandRepeat 1
                 -echoCommand 0
                 -italicized 0
-                -boldFont 0
+                -boldFont 1
                 -sourceType "mel" 
                 -longDivider 1
                 menuEditorMenuItem6;
@@ -996,6 +996,81 @@
                 -sourceType "mel" 
                 -longDivider 1
                 menuEditorMenuItem3;
+
+            menuItem
+                -label "Display Override - Normal" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "python( \"import AAikman_SetOverrideType as aaSetOverrideType; reload(aaSetOverrideType); aaSetOverrideType.main(0);\" ) " 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "NW" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -echoCommand 0
+                -italicized 0
+                -boldFont 0
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem4;
+
+            menuItem
+                -label "Display Override - Template" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "python( \"import AAikman_SetOverrideType as aaSetOverrideType; reload(aaSetOverrideType); aaSetOverrideType.main(1);\" )" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "W" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -echoCommand 0
+                -italicized 0
+                -boldFont 0
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem5;
+
+            menuItem
+                -label "Display Override - Reference" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "python( \"import AAikman_SetOverrideType as aaSetOverrideType; reload(aaSetOverrideType); aaSetOverrideType.main(2);\" )" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "SW" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -echoCommand 0
+                -italicized 0
+                -boldFont 0
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem6;
 
         setParent -m ..;
 
@@ -5478,7 +5553,7 @@
                 -allowOptionBoxes 1
                 -enableCommandRepeat 1
                 -italicized 0
-                -boldFont 0
+                -boldFont 1
                 -sourceType "mel" 
                 -longDivider 1
                 menuEditorMenuItem6;
@@ -5504,12 +5579,13 @@
                     -image "aimConstraint.png" 
                     -echoCommand 0
                     -italicized 0
-                    -boldFont 0
+                    -boldFont 1
                     -sourceType "mel" 
                     -longDivider 1
                     menuEditorMenuItem1;
 
                 menuItem
+                    -label "menuEditorMenuItem2" 
                     -divider 0
                     -subMenu 0
                     -tearOff 0
@@ -5527,7 +5603,7 @@
                     -enableCommandRepeat 0
                     -echoCommand 0
                     -italicized 0
-                    -boldFont 0
+                    -boldFont 1
                     -sourceType "mel" 
                     -longDivider 1
                     menuEditorMenuItem2;
@@ -5552,7 +5628,7 @@
                     -enableCommandRepeat 1
                     -echoCommand 0
                     -italicized 0
-                    -boldFont 0
+                    -boldFont 1
                     -sourceType "mel" 
                     -longDivider 1
                     menuEditorMenuItem3;
@@ -5577,7 +5653,7 @@
                     -enableCommandRepeat 1
                     -echoCommand 0
                     -italicized 0
-                    -boldFont 0
+                    -boldFont 1
                     -sourceType "mel" 
                     -longDivider 1
                     menuEditorMenuItem4;
@@ -5650,7 +5726,7 @@
                 -allowOptionBoxes 1
                 -enableCommandRepeat 1
                 -italicized 0
-                -boldFont 0
+                -boldFont 1
                 -sourceType "mel" 
                 -longDivider 1
                 menuEditorMenuItem13;
@@ -5676,12 +5752,13 @@
                     -image "poleVectorConstraint.png" 
                     -echoCommand 0
                     -italicized 0
-                    -boldFont 0
+                    -boldFont 1
                     -sourceType "mel" 
                     -longDivider 1
                     menuEditorMenuItem1;
 
                 menuItem
+                    -label "menuEditorMenuItem2" 
                     -divider 0
                     -subMenu 0
                     -tearOff 0
@@ -5699,7 +5776,7 @@
                     -enableCommandRepeat 0
                     -echoCommand 0
                     -italicized 0
-                    -boldFont 0
+                    -boldFont 1
                     -sourceType "mel" 
                     -longDivider 1
                     menuEditorMenuItem2;
@@ -5724,7 +5801,7 @@
                     -enableCommandRepeat 1
                     -echoCommand 0
                     -italicized 0
-                    -boldFont 0
+                    -boldFont 1
                     -sourceType "mel" 
                     -longDivider 1
                     menuEditorMenuItem3;
@@ -5749,7 +5826,7 @@
                     -enableCommandRepeat 1
                     -echoCommand 0
                     -italicized 0
-                    -boldFont 0
+                    -boldFont 1
                     -sourceType "mel" 
                     -longDivider 1
                     menuEditorMenuItem4;
@@ -6378,7 +6455,7 @@
                 -allowOptionBoxes 1
                 -enableCommandRepeat 1
                 -italicized 0
-                -boldFont 0
+                -boldFont 1
                 -sourceType "mel" 
                 -longDivider 1
                 menuEditorMenuItem2;
@@ -6404,7 +6481,7 @@
                     -image "attachCurves.png" 
                     -echoCommand 0
                     -italicized 0
-                    -boldFont 0
+                    -boldFont 1
                     -sourceType "mel" 
                     -longDivider 1
                     menuEditorMenuItem1;
@@ -6430,7 +6507,7 @@
                     -image "detachCurve.png" 
                     -echoCommand 0
                     -italicized 0
-                    -boldFont 0
+                    -boldFont 1
                     -sourceType "mel" 
                     -longDivider 1
                     menuEditorMenuItem2;
@@ -6456,7 +6533,7 @@
                     -image "rebuildCurve.png" 
                     -echoCommand 0
                     -italicized 0
-                    -boldFont 0
+                    -boldFont 1
                     -sourceType "mel" 
                     -longDivider 1
                     menuEditorMenuItem3;
@@ -6481,7 +6558,7 @@
                     -enableCommandRepeat 1
                     -echoCommand 0
                     -italicized 0
-                    -boldFont 0
+                    -boldFont 1
                     -sourceType "mel" 
                     -longDivider 1
                     menuEditorMenuItem4;
@@ -6506,7 +6583,7 @@
                     -enableCommandRepeat 1
                     -echoCommand 0
                     -italicized 0
-                    -boldFont 0
+                    -boldFont 1
                     -sourceType "mel" 
                     -longDivider 1
                     menuEditorMenuItem5;
@@ -6534,12 +6611,13 @@
                 -image "square.png" 
                 -echoCommand 0
                 -italicized 0
-                -boldFont 0
+                -boldFont 1
                 -sourceType "mel" 
                 -longDivider 1
                 menuEditorMenuItem5;
 
             menuItem
+                -label "menuEditorMenuItem7" 
                 -divider 0
                 -subMenu 0
                 -tearOff 0
@@ -6557,7 +6635,7 @@
                 -enableCommandRepeat 0
                 -echoCommand 0
                 -italicized 0
-                -boldFont 0
+                -boldFont 1
                 -sourceType "mel" 
                 -longDivider 1
                 menuEditorMenuItem7;
@@ -6706,10 +6784,35 @@
                 -enableCommandRepeat 1
                 -echoCommand 0
                 -italicized 0
-                -boldFont 0
+                -boldFont 1
                 -sourceType "mel" 
                 -longDivider 1
                 menuEditorMenuItem8;
+
+            menuItem
+                -label "Custer Curve CVs" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "python(\"import AAikman_CreateClusterForCurveCvs as aaClusterCurve; reload(aaClusterCurve); aaClusterCurve.main();\")" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "S" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem1;
 
         setParent -m ..;
 

@@ -1,0 +1,45 @@
+float $ChainVisMod = 3.75;
+
+Chain_17_ctrl_parent.visibility = clamp(0, 1, (Hand_L_ctrl.Chain * $ChainVisMod) - 14);
+
+
+Chain_16_ctrl_parent.visibility = clamp(0, 1, (Hand_L_ctrl.Chain * $ChainVisMod) - 13);
+
+
+Chain_15_ctrl_parent.visibility = clamp(0, 1, (Hand_L_ctrl.Chain * $ChainVisMod) - 12);
+
+
+Chain_14_ctrl_parent.visibility = clamp(0, 1, (Hand_L_ctrl.Chain * $ChainVisMod) - 11);
+
+
+Chain_13_ctrl_parent.visibility = clamp(0, 1, (Hand_L_ctrl.Chain * $ChainVisMod) - 10);
+
+
+Chain_12_ctrl_parent.visibility = clamp(0, 1, (Hand_L_ctrl.Chain * $ChainVisMod) - 9);
+
+
+Chain_11_ctrl_parent.visibility = clamp(0, 1, (Hand_L_ctrl.Chain * $ChainVisMod) - 8);
+
+
+Chain_10_ctrl_parent.visibility = clamp(0, 1, (Hand_L_ctrl.Chain * $ChainVisMod) - 7);
+
+
+Chain_9_ctrl_parent.visibility = clamp(0, 1, (Hand_L_ctrl.Chain * $ChainVisMod) - 6);
+
+
+Chain_8_ctrl_parent.visibility = clamp(0, 1, (Hand_L_ctrl.Chain * $ChainVisMod) - 5);
+
+
+Chain_7_ctrl_parent.visibility = clamp(0, 1, (Hand_L_ctrl.Chain * $ChainVisMod) - 4);
+
+
+Chain_6_ctrl_parent.visibility = clamp(0, 1, (Hand_L_ctrl.Chain * $ChainVisMod) - 3);
+
+
+Chain_5_ctrl_parent.visibility = clamp(0, 1, (Hand_L_ctrl.Chain * $ChainVisMod) - 2);
+
+
+Chain_4_ctrl_parent.visibility = clamp(0, 1, (Hand_L_ctrl.Chain * $ChainVisMod) - 1);
+
+
+Chain_3_ctrl_parent.visibility = clamp(0, 1, (Hand_L_ctrl.Chain * $ChainVisMod) - 0);

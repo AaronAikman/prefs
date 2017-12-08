@@ -1,0 +1,454 @@
+float $ChainMod = 22.75;
+
+Chain_root.sx = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 91);
+Chain_root.sy = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 91);
+Chain_root.sz = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 91);
+
+Chain_jnt_2.sx = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 90);
+Chain_jnt_2.sy = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 90);
+Chain_jnt_2.sz = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 90);
+
+
+Chain_jnt_3.sx = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 89);
+Chain_jnt_3.sy = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 89);
+Chain_jnt_3.sz = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 89);
+
+
+Chain_jnt_4.sx = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 88);
+Chain_jnt_4.sy = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 88);
+Chain_jnt_4.sz = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 88);
+
+
+Chain_jnt_5.sx = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 87);
+Chain_jnt_5.sy = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 87);
+Chain_jnt_5.sz = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 87);
+
+
+Chain_jnt_6.sx = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 86);
+Chain_jnt_6.sy = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 86);
+Chain_jnt_6.sz = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 86);
+
+
+Chain_jnt_7.sx = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 85);
+Chain_jnt_7.sy = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 85);
+Chain_jnt_7.sz = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 85);
+
+
+Chain_jnt_8.sx = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 84);
+Chain_jnt_8.sy = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 84);
+Chain_jnt_8.sz = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 84);
+
+
+Chain_jnt_9.sx = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 83);
+Chain_jnt_9.sy = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 83);
+Chain_jnt_9.sz = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 83);
+
+
+Chain_jnt_10.sx = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 82);
+Chain_jnt_10.sy = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 82);
+Chain_jnt_10.sz = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 82);
+
+
+Chain_jnt_11.sx = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 81);
+Chain_jnt_11.sy = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 81);
+Chain_jnt_11.sz = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 81);
+
+
+Chain_jnt_12.sx = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 80);
+Chain_jnt_12.sy = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 80);
+Chain_jnt_12.sz = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 80);
+
+
+Chain_jnt_13.sx = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 79);
+Chain_jnt_13.sy = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 79);
+Chain_jnt_13.sz = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 79);
+
+
+Chain_jnt_14.sx = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 78);
+Chain_jnt_14.sy = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 78);
+Chain_jnt_14.sz = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 78);
+
+
+Chain_jnt_15.sx = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 77);
+Chain_jnt_15.sy = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 77);
+Chain_jnt_15.sz = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 77);
+
+
+Chain_jnt_16.sx = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 76);
+Chain_jnt_16.sy = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 76);
+Chain_jnt_16.sz = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 76);
+
+
+Chain_jnt_17.sx = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 75);
+Chain_jnt_17.sy = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 75);
+Chain_jnt_17.sz = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 75);
+
+
+Chain_jnt_18.sx = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 74);
+Chain_jnt_18.sy = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 74);
+Chain_jnt_18.sz = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 74);
+
+
+Chain_jnt_19.sx = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 73);
+Chain_jnt_19.sy = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 73);
+Chain_jnt_19.sz = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 73);
+
+
+Chain_jnt_20.sx = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 72);
+Chain_jnt_20.sy = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 72);
+Chain_jnt_20.sz = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 72);
+
+
+Chain_jnt_21.sx = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 71);
+Chain_jnt_21.sy = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 71);
+Chain_jnt_21.sz = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 71);
+
+
+Chain_jnt_22.sx = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 70);
+Chain_jnt_22.sy = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 70);
+Chain_jnt_22.sz = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 70);
+
+
+Chain_jnt_23.sx = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 69);
+Chain_jnt_23.sy = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 69);
+Chain_jnt_23.sz = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 69);
+
+
+Chain_jnt_24.sx = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 68);
+Chain_jnt_24.sy = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 68);
+Chain_jnt_24.sz = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 68);
+
+
+Chain_jnt_25.sx = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 67);
+Chain_jnt_25.sy = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 67);
+Chain_jnt_25.sz = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 67);
+
+
+Chain_jnt_26.sx = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 66);
+Chain_jnt_26.sy = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 66);
+Chain_jnt_26.sz = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 66);
+
+
+Chain_jnt_27.sx = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 65);
+Chain_jnt_27.sy = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 65);
+Chain_jnt_27.sz = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 65);
+
+
+Chain_jnt_28.sx = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 64);
+Chain_jnt_28.sy = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 64);
+Chain_jnt_28.sz = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 64);
+
+
+Chain_jnt_29.sx = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 63);
+Chain_jnt_29.sy = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 63);
+Chain_jnt_29.sz = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 63);
+
+
+Chain_jnt_30.sx = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 62);
+Chain_jnt_30.sy = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 62);
+Chain_jnt_30.sz = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 62);
+
+
+Chain_jnt_31.sx = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 61);
+Chain_jnt_31.sy = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 61);
+Chain_jnt_31.sz = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 61);
+
+
+Chain_jnt_32.sx = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 60);
+Chain_jnt_32.sy = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 60);
+Chain_jnt_32.sz = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 60);
+
+
+Chain_jnt_33.sx = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 59);
+Chain_jnt_33.sy = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 59);
+Chain_jnt_33.sz = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 59);
+
+
+Chain_jnt_34.sx = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 58);
+Chain_jnt_34.sy = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 58);
+Chain_jnt_34.sz = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 58);
+
+
+Chain_jnt_35.sx = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 57);
+Chain_jnt_35.sy = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 57);
+Chain_jnt_35.sz = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 57);
+
+
+Chain_jnt_36.sx = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 56);
+Chain_jnt_36.sy = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 56);
+Chain_jnt_36.sz = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 56);
+
+
+Chain_jnt_37.sx = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 55);
+Chain_jnt_37.sy = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 55);
+Chain_jnt_37.sz = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 55);
+
+
+Chain_jnt_38.sx = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 54);
+Chain_jnt_38.sy = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 54);
+Chain_jnt_38.sz = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 54);
+
+
+Chain_jnt_39.sx = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 53);
+Chain_jnt_39.sy = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 53);
+Chain_jnt_39.sz = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 53);
+
+
+Chain_jnt_40.sx = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 52);
+Chain_jnt_40.sy = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 52);
+Chain_jnt_40.sz = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 52);
+
+
+Chain_jnt_41.sx = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 51);
+Chain_jnt_41.sy = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 51);
+Chain_jnt_41.sz = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 51);
+
+
+Chain_jnt_42.sx = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 50);
+Chain_jnt_42.sy = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 50);
+Chain_jnt_42.sz = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 50);
+
+
+Chain_jnt_43.sx = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 49);
+Chain_jnt_43.sy = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 49);
+Chain_jnt_43.sz = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 49);
+
+
+Chain_jnt_44.sx = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 48);
+Chain_jnt_44.sy = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 48);
+Chain_jnt_44.sz = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 48);
+
+
+Chain_jnt_45.sx = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 47);
+Chain_jnt_45.sy = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 47);
+Chain_jnt_45.sz = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 47);
+
+
+Chain_jnt_46.sx = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 46);
+Chain_jnt_46.sy = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 46);
+Chain_jnt_46.sz = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 46);
+
+
+Chain_jnt_47.sx = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 45);
+Chain_jnt_47.sy = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 45);
+Chain_jnt_47.sz = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 45);
+
+
+Chain_jnt_48.sx = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 44);
+Chain_jnt_48.sy = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 44);
+Chain_jnt_48.sz = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 44);
+
+
+Chain_jnt_49.sx = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 43);
+Chain_jnt_49.sy = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 43);
+Chain_jnt_49.sz = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 43);
+
+
+Chain_jnt_50.sx = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 42);
+Chain_jnt_50.sy = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 42);
+Chain_jnt_50.sz = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 42);
+
+
+Chain_jnt_51.sx = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 41);
+Chain_jnt_51.sy = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 41);
+Chain_jnt_51.sz = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 41);
+
+
+Chain_jnt_52.sx = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 40);
+Chain_jnt_52.sy = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 40);
+Chain_jnt_52.sz = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 40);
+
+
+Chain_jnt_53.sx = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 39);
+Chain_jnt_53.sy = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 39);
+Chain_jnt_53.sz = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 39);
+
+
+Chain_jnt_54.sx = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 38);
+Chain_jnt_54.sy = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 38);
+Chain_jnt_54.sz = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 38);
+
+
+Chain_jnt_55.sx = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 37);
+Chain_jnt_55.sy = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 37);
+Chain_jnt_55.sz = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 37);
+
+
+Chain_jnt_56.sx = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 36);
+Chain_jnt_56.sy = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 36);
+Chain_jnt_56.sz = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 36);
+
+
+Chain_jnt_57.sx = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 35);
+Chain_jnt_57.sy = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 35);
+Chain_jnt_57.sz = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 35);
+
+
+Chain_jnt_58.sx = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 34);
+Chain_jnt_58.sy = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 34);
+Chain_jnt_58.sz = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 34);
+
+
+Chain_jnt_59.sx = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 33);
+Chain_jnt_59.sy = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 33);
+Chain_jnt_59.sz = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 33);
+
+
+Chain_jnt_60.sx = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 32);
+Chain_jnt_60.sy = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 32);
+Chain_jnt_60.sz = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 32);
+
+
+Chain_jnt_61.sx = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 31);
+Chain_jnt_61.sy = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 31);
+Chain_jnt_61.sz = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 31);
+
+
+Chain_jnt_62.sx = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 30);
+Chain_jnt_62.sy = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 30);
+Chain_jnt_62.sz = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 30);
+
+
+Chain_jnt_63.sx = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 29);
+Chain_jnt_63.sy = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 29);
+Chain_jnt_63.sz = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 29);
+
+
+Chain_jnt_64.sx = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 28);
+Chain_jnt_64.sy = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 28);
+Chain_jnt_64.sz = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 28);
+
+
+Chain_jnt_65.sx = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 27);
+Chain_jnt_65.sy = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 27);
+Chain_jnt_65.sz = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 27);
+
+
+Chain_jnt_66.sx = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 26);
+Chain_jnt_66.sy = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 26);
+Chain_jnt_66.sz = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 26);
+
+
+Chain_jnt_67.sx = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 25);
+Chain_jnt_67.sy = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 25);
+Chain_jnt_67.sz = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 25);
+
+
+Chain_jnt_68.sx = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 24);
+Chain_jnt_68.sy = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 24);
+Chain_jnt_68.sz = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 24);
+
+
+Chain_jnt_69.sx = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 23);
+Chain_jnt_69.sy = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 23);
+Chain_jnt_69.sz = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 23);
+
+
+Chain_jnt_70.sx = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 22);
+Chain_jnt_70.sy = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 22);
+Chain_jnt_70.sz = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 22);
+
+
+Chain_jnt_71.sx = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 21);
+Chain_jnt_71.sy = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 21);
+Chain_jnt_71.sz = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 21);
+
+
+Chain_jnt_72.sx = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 20);
+Chain_jnt_72.sy = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 20);
+Chain_jnt_72.sz = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 20);
+
+
+Chain_jnt_73.sx = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 19);
+Chain_jnt_73.sy = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 19);
+Chain_jnt_73.sz = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 19);
+
+
+Chain_jnt_74.sx = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 18);
+Chain_jnt_74.sy = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 18);
+Chain_jnt_74.sz = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 18);
+
+
+Chain_jnt_75.sx = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 17);
+Chain_jnt_75.sy = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 17);
+Chain_jnt_75.sz = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 17);
+
+
+Chain_jnt_76.sx = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 16);
+Chain_jnt_76.sy = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 16);
+Chain_jnt_76.sz = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 16);
+
+
+Chain_jnt_77.sx = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 15);
+Chain_jnt_77.sy = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 15);
+Chain_jnt_77.sz = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 15);
+
+
+Chain_jnt_78.sx = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 14);
+Chain_jnt_78.sy = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 14);
+Chain_jnt_78.sz = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 14);
+
+
+Chain_jnt_79.sx = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 13);
+Chain_jnt_79.sy = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 13);
+Chain_jnt_79.sz = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 13);
+
+
+Chain_jnt_80.sx = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 12);
+Chain_jnt_80.sy = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 12);
+Chain_jnt_80.sz = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 12);
+
+
+Chain_jnt_81.sx = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 11);
+Chain_jnt_81.sy = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 11);
+Chain_jnt_81.sz = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 11);
+
+
+Chain_jnt_82.sx = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 10);
+Chain_jnt_82.sy = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 10);
+Chain_jnt_82.sz = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 10);
+
+
+Chain_jnt_83.sx = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 9);
+Chain_jnt_83.sy = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 9);
+Chain_jnt_83.sz = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 9);
+
+
+Chain_jnt_84.sx = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 8);
+Chain_jnt_84.sy = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 8);
+Chain_jnt_84.sz = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 8);
+
+
+Chain_jnt_85.sx = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 7);
+Chain_jnt_85.sy = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 7);
+Chain_jnt_85.sz = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 7);
+
+
+Chain_jnt_86.sx = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 6);
+Chain_jnt_86.sy = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 6);
+Chain_jnt_86.sz = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 6);
+
+
+Chain_jnt_87.sx = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 5);
+Chain_jnt_87.sy = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 5);
+Chain_jnt_87.sz = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 5);
+
+
+Chain_jnt_88.sx = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 4);
+Chain_jnt_88.sy = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 4);
+Chain_jnt_88.sz = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 4);
+
+
+Chain_jnt_89.sx = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 3);
+Chain_jnt_89.sy = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 3);
+Chain_jnt_89.sz = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 3);
+
+
+Chain_jnt_90.sx = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 2);
+Chain_jnt_90.sy = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 2);
+Chain_jnt_90.sz = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 2);
+
+
+Chain_jnt_91.sx = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 1);
+Chain_jnt_91.sy = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 1);
+Chain_jnt_91.sz = clamp(0.001, 1, (Hand_L_ctrl.Chain * $ChainMod) - 1);

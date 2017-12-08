@@ -1499,5 +1499,36 @@ global proc shelf_Custom () {
         -commandRepeatable 1
         -flat 1
     ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "import maya.cmds as mc; mc.commandPort(name=\"127.0.0.1:7002\", stp=\"python\", echoOutput=True)" 
+        -enableBackground 0
+        -align "center" 
+        -label "import maya.cmds as mc; mc.commandPort(name=\"127.0.0.1:7002\", st..." 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Port" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.5 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import maya.cmds as cmds\n# Open new ports\ntry:\n    cmds.commandPort(name=\":7002\", close=True)\nexcept:\n    cmds.commandPort(name=\":7002\", sourceType=\"python\", echoOutput=True)\n\n" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
 
 } 

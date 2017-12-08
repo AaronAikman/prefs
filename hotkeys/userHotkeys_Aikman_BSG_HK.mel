@@ -11,7 +11,6 @@ hotkeySet -source "Maya_Default" -current Aikman_BSG_HK;
 //
 hotkey -keyShortcut "f" -sht -releaseName ("AikmanWork_ReleaseNameCommand");
 hotkey -keyShortcut "f" -sht -name ("AikmanWork_PressNameCommand");
-hotkey -keyShortcut "g" -ctl -sht -name ("Group_ForRiggingNameCommand");
 hotkeyCtx -type "Editor" -addClient "hyperShadePanel";
 hotkeyCtx -type "Editor" -addClient "polyTexturePlacementPanel";
 hotkeyCtx -type "Editor" -addClient "nodeEditorPanel";
