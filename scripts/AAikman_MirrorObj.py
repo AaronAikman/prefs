@@ -22,7 +22,7 @@ python("import AAikman_MirrorObj as aaMirrorObj; reload(aaMirrorObj); aaMirrorOb
 import maya.cmds as cmds
 
 def main(dir = [-1,1,1]):
-    
+
     t = 'TempGroup'
     sel = cmds.ls(sl=True)
     dupedObj = []

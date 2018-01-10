@@ -1561,5 +1561,98 @@ global proc shelf_Custom () {
         -commandRepeatable 1
         -flat 1
     ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "import Almond_CleanupSwitches as almondCleanSwitches\nreload(almondCleanSwitches)\nalmondCleanSwitches.main()" 
+        -enableBackground 0
+        -align "center" 
+        -label "import Almond_CleanupSwitches as almondCleanSwitches\nreload(almo..." 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Clean" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.5 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import Almond_CleanupSwitches as almondCleanSwitches\nreload(almondCleanSwitches)\nalmondCleanSwitches.main()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "import sys\nsys.path.append('d:/Almond/Main/Pipeline/Tools/Maya/scripts/')\nimport Almond_SelectBasicSumoControls as alm_SelSumo\nreload(alm_SelSumo)\nalm_SelSumo.main()" 
+        -enableBackground 0
+        -align "center" 
+        -label "import sys\nsys.path.append('d:/Almond/Main/Pipeline/Tools/Maya/s..." 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -font "plainLabelFont" 
+        -imageOverlayLabel "SelSum" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.5 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import sys\nsys.path.append('d:/Almond/Main/Pipeline/Tools/Maya/scripts/')\nimport Almond_SelectBasicSumoControls as alm_SelSumo\nreload(alm_SelSumo)\nalm_SelSumo.main()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "from ngSkinTools.ui.mainwindow import MainWindow\nMainWindow.open()" 
+        -enableBackground 0
+        -align "center" 
+        -label "from ngSkinTools.ui.mainwindow import MainWindow\nMainWindow.open..." 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -font "plainLabelFont" 
+        -imageOverlayLabel "ng" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.5 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "from ngSkinTools.ui.mainwindow import MainWindow\nMainWindow.open()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
 
 } 
