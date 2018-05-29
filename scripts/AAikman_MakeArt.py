@@ -44,10 +44,16 @@ dirs = [[1,1,1],
         [0,0,-1.5],
         [-1,1,-1]]
 
-def main(arms = 1, iters = 10, mag = 5):
+def main(arms = 3, iters = 10, mag = 5, doCube = False):
     for i in pm.selected():
         for b in range(arms):
-            for a in dirs:
+            dirsToUse = []
+            if doCube:
+                dirsToUse = dirsCube
+            else:
+                dirsToUse = dirs
+
+            for a in dirsToUse:
                 pm.select(i)
                 for j in range(iters + 1):
                     k = pm.duplicate()
