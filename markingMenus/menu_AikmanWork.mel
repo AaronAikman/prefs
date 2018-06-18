@@ -4724,7 +4724,7 @@
             -enableCommandRepeat 1
             -echoCommand 0
             -italicized 0
-            -boldFont 0
+            -boldFont 1
             -sourceType "mel" 
             -longDivider 1
             menuEditorMenuItem2;
@@ -5060,7 +5060,7 @@
                 -divider 0
                 -subMenu 0
                 -tearOff 0
-                -command "oaSmoothKeys" 
+                -command "global proc oaSmoothKeys () {\n\n\t//Get the selected curves\n\tstring $curves[] = `keyframe -q -name`;\n\tif (`size $curves` == 0) error \"Select at least 3 keys in the Graph Editor.\";\n\n\t//Go\n\tfloat $prevVal[];\n\tfloat $currVal[];\n\tfloat $nextVal[];\n\tfloat $average;\n\tfloat $keys[]; //frame numbers\n\tint $sizeOfKeys;\n\tstring $dupCurve[];\n\tfloat $dupCurveVal[];\n\n\tfor ($curve in $curves) {\n\n\t    //Get the selected keys\n\t\t$keys = `keyframe -q -sl $curve`;\n\t\t$sizeOfKeys = `size $keys`;\n\n\t\t//The first and last key will not be touched.\n\t\t//Therefore there must be at least 3 keys selected.\n\t\tif ($sizeOfKeys < 3) continue;\n\n        //Duplicate the curve to store values in\n        $dupCurve = `duplicate $curve`;\n\n\t\t//Start with frame 2, don't touch last frame\n\t\tfor ($i = 1; $i < $sizeOfKeys-1; $i++) {\n\n\t\t    $prevVal = `keyframe -time $keys[$i-1] -q -vc $curve`;\n\t\t    $currVal = `keyframe -time $keys[$i] -q -vc $curve`;\n\t\t    $nextVal = `keyframe -time $keys[$i+1] -q -vc $curve`;\n\n\t\t    //Calculate average\n\t\t\t$average = ($prevVal[0] + $currVal[0] + $nextVal[0]) / 3;\n\n\t\t    //Store the value in the dup curve\n            keyframe -time $keys[$i] -absolute -valueChange $average $dupCurve[0];\n\t\t}\n\t\t\n\t\t//Apply the new values\n\t\tfor ($i = 1; $i < $sizeOfKeys-1; $i++) {\n\n\t\t    $dupCurveVal = `keyframe -time $keys[$i] -q -vc $dupCurve[0]`;\n            keyframe -time $keys[$i] -absolute -valueChange $dupCurveVal[0] $curve;\n\t\t}\t\n\t\t\n\t\tdelete $dupCurve[0];\t\n\t\n\t}\n}\noaSmoothKeys" 
                 -altModifier 0
                 -optionModifier 0
                 -commandModifier 0
